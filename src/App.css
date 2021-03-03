@@ -67,7 +67,6 @@ body{
 }
 
 .card, .dropzone{
-  transition: 0.4s;
 }
 
 .isDragging{

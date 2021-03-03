@@ -28,9 +28,13 @@ function App() {
   function dragOver({target}: any){
     //console.log('DropZone: Over');
     target.classList.add('over');
-
-    const cardDragging = document.querySelector('.isDragging');
-    target.appendChild(cardDragging);
+    try {
+      const cardDragging = document.querySelector('.isDragging');
+      target.appendChild(cardDragging);
+    } catch (error) {
+      
+    }
+    
   }
 
   function dragLeave({target}: any){
