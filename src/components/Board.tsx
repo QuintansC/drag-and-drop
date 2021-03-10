@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from 'react';
-import '../App.css';
+import './../styles/App.css';
 
 import { DropzoneContext } from '../contexts/DropzoneContext';
 

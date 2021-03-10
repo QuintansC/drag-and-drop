@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { DropzoneContext } from '../contexts/DropzoneContext';
-import '../App.css';
+import './../styles/App.css';
 
 interface CardProps{
     color: string,
