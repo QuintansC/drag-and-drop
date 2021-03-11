@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from 'react';
-import './../styles/App.css';
+import './../styles/components/Board.css'
 
 import { DropzoneContext } from '../contexts/DropzoneContext';
 
@@ -14,7 +14,7 @@ export function Board({name, children}: BoardProps){
   //Funções da dropzone
   const { dropzoneEnabled } = useContext(DropzoneContext);
     function dragEnter(){
-        console.log('DropZone: Enter in drop Zone');
+        //console.log('DropZone: Enter in drop Zone');
       }
     
       function dragOver({target}: any){

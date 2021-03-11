@@ -1,16 +1,17 @@
 import { useContext } from 'react';
 import { DropzoneContext } from '../contexts/DropzoneContext';
-import './../styles/App.css';
+import '../styles/components/Card.css';
 
 interface CardProps{
     color: string,
     content: string,
 }
 
+
 export function Cards (props: CardProps){
     const { enableDropzone, disableDropzone} = useContext(DropzoneContext);
 
-    function dragstart({target}: any){
+    function dragstart({target} :any){
         //console.log('Card: start Drag'); 
         enableDropzone();
         target.classList.add('isDragging');

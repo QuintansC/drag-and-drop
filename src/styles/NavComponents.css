@@ -1,0 +1,50 @@
+.NavContent{
+    position:relative;
+    width: 100vw;
+    height: 15vh;
+    background-color: #ff8c00;
+    display: flex; 
+    align-items: center;
+}
+
+.comp{
+    display: flex;
+    position: relative;
+    left: 5vw;
+}
+
+.perfil{
+    position: relative;
+    left: 50vw;
+}
+
+.NavContent img{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.7rem;
+    width: 35px;
+}
+
+.NavContent button, a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.5rem;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    font: none;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.NavContent button{
+    background-color: transparent;
+    border: 0;
+}
+
+.buttonAnimate{
+    background-color: red;
+}
