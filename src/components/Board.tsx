@@ -11,6 +11,7 @@ interface BoardProps{
 
 export function Board({name, children}: BoardProps){
 
+  //Funções da dropzone
   const { dropzoneEnabled } = useContext(DropzoneContext);
     function dragEnter(){
         console.log('DropZone: Enter in drop Zone');
