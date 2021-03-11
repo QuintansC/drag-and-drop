@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import {Board} from './components/Board';
 import {Cards} from './components/Cards';
 
 function App() {
 
   return (
+    //App agora nao tem mais estados
     <div className="boards">
       <Board name="Teste">
         <Cards color="red" content="Teste"/>
