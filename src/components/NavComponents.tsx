@@ -4,6 +4,8 @@ import More from './../images/more.svg';
 import Save from './../images/save.svg';
 import Note from './../images/noteadd.svg';
 import Logout from './../images/logout.svg';
+
+import Gamepad from './../images/gamepad.svg';
 import { useEffect, useState } from 'react';
 
 
@@ -16,12 +18,12 @@ export function NavComponents(){
   }
 
   async function buttonAnimate({target}: any) {
-    setAnimateButton(true);
+    animateButton?setAnimateButton(false):setAnimateButton(true);
     await target.classList.add('buttonAnimate');
   }
 
  async function buttonAnimateDown({target}: any) {
-    setAnimateButton(false);
+    animateButton?setAnimateButton(false):setAnimateButton(true);
     await target.classList.remove('buttonAnimate');
   }
 
@@ -31,6 +33,7 @@ export function NavComponents(){
 
   return(
     <nav className="NavContent">
+      <img src={Gamepad} alt="Logo" className="logo" />
         <div className="comp">
           <a 
             href="http://localhost:3000/"
@@ -59,7 +62,13 @@ export function NavComponents(){
         </div>
 
         <div className="perfil">
-        <a href="http://localhost:3000/" onMouseEnter={buttonAnimate} onMouseLeave={buttonAnimateDown}>Sair <img src={Logout} alt="logout"/></a>
+          <a 
+            href="http://localhost:3000/"
+            onMouseEnter={buttonAnimate} 
+            onMouseLeave={buttonAnimateDown}
+          >
+            Sair <img src={Logout} onMouseMove={removeClass} alt="logout"/>
+          </a>
         </div>
     </nav>
   )

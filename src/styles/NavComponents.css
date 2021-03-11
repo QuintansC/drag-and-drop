@@ -7,18 +7,23 @@
     align-items: center;
 }
 
+.NavContent .logo{
+    width: 50px;
+    margin-left: 25px;
+}
+
 .comp{
     display: flex;
     position: relative;
-    left: 5vw;
+    left: 2vh;
 }
 
 .perfil{
     position: relative;
-    left: 50vw;
+    left: 40vw;
 }
 
-.NavContent img{
+.NavContent .comp img{
     font-size: 0;
     padding: 0;
     margin: 0;
@@ -38,6 +43,8 @@
     font: none;
     text-decoration: none;
     padding: 15px;
+
+    border-radius: 12px;
 }
 
 .NavContent button{
@@ -46,5 +53,5 @@
 }
 
 .buttonAnimate{
-    background-color: red;
+    background-color: rgba(0, 255, 55, 0.8);
 }

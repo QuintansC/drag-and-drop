@@ -1,15 +1,21 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { DropzoneContext } from '../contexts/DropzoneContext';
 import '../styles/components/Card.css';
 
 interface CardProps{
     color: string,
     content: string,
+    hourInit: number,
+    hourEnd: number,
 }
 
 
 export function Cards (props: CardProps){
     const { enableDropzone, disableDropzone} = useContext(DropzoneContext);
+
+    useEffect(() =>{
+      
+    }, [])
 
     function dragstart({target} :any){
         //console.log('Card: start Drag'); 
@@ -37,7 +43,7 @@ export function Cards (props: CardProps){
             onDragEnd={dragend}
           >
             <div className={`${'status'} ${props.color}`}></div>
-            <div className="content">{props.content}</div>
+            <div className="content">{props.content}<br></br>Hora: {props.hourInit}</div>
           </div>
     );
 }
