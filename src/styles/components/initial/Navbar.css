@@ -1,0 +1,47 @@
+.Navbar{
+    position:relative;
+    width: 100vw;
+    height: 15vh;
+    background-color: #ff8c00;
+    display: flex; 
+    align-items: center;
+}
+
+.Navbar .logo{
+    width: 50px;
+    margin-left: 25px;
+}
+
+.navs{
+    display: flex;
+    position: relative;
+    left: 2vh;
+}
+
+.login{
+    display: flex;
+    position: relative;
+    left: 72vw;
+}
+
+
+.Navbar a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font: none;
+    text-decoration: none;
+    padding: 15px;
+
+    border-radius: 12px;
+}
+
+
+.buttonAnimate{
+    background-color: rgba(0, 255, 55, 0.8);
+}

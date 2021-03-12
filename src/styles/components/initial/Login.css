@@ -1,0 +1,49 @@
+.loginContent{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top:0;
+    background-color:aquamarine;
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+form input {
+    display: block;
+    line-height: 10px;
+    width: 250px;
+    height: 25px;
+}
+
+.submitButton{
+    position: relative;
+    background-color: royalblue;
+    border: 0;
+    width: 120px;
+    height: 30px;
+    font-size: 1rem;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.conectado{
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%);
+}
+
+.textConectado{
+    position: relative;
+}

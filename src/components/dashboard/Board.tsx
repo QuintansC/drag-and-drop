@@ -1,7 +1,7 @@
 import { ReactNode, useContext } from 'react';
-import './../styles/components/Board.css'
+import '../../styles/components/Board.css'
 
-import { DropzoneContext } from '../contexts/DropzoneContext';
+import { DropzoneContext } from '../../contexts/DropzoneContext';
 
 interface BoardProps{
   name: string,
