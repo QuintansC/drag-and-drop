@@ -6,7 +6,7 @@ import Note from './../images/noteadd.svg';
 import Logout from './../images/logout.svg';
 
 import Gamepad from './../images/gamepad.svg';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 
 
 export function NavComponents(){
