@@ -8,8 +8,6 @@ function App() {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
-  
-
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -17,13 +15,13 @@ function App() {
     }, 1000);
   }, [seconds]);
   
-  if(seconds === 60){
+  if(seconds >= 60){
     setMinutes(minutes + 1);
     setSeconds(0);
   }
 
-  if(minutes === 60){
-    setHours(minutes + 1);
+  if(minutes >= 60){
+    setHours(hours + 1);
     setMinutes(0);
   }
   return (
@@ -32,15 +30,15 @@ function App() {
       <div className="boards">
 
         <Board name="To Do">
-          <Cards hourInit={seconds} hourEnd={90} color="red" content="Terminar a aplicação"/>
+          <Cards hora={{hours, minutes, seconds}} color="red" content="Terminar a aplicação"/>
         </Board> 
 
         <Board name="In progress">
-          <Cards hourInit={minutes} hourEnd={90} color="blue" content="Programando a aplicação"/>
+          <Cards hora={{hours, minutes, seconds}} color="blue" content="Programando a aplicação"/>
         </Board> 
 
         <Board name="Done">
-          <Cards hourInit={hours} hourEnd={90} color="green" content="Aplicação final"/>
+          <Cards hora={{hours, minutes, seconds}} color="green" content="Aplicação final"/>
         </Board>
       </div>
     </div>
