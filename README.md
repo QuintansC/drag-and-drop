@@ -1,6 +1,6 @@
 # Recriando o Trello
 
-<img src="src/images/README/home.png" width='150px' height='150px'>
+<img src="src/images/README/home.png" width='150px' height='350px'>
 
 ## Available Scripts
 
