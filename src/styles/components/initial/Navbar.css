@@ -2,13 +2,13 @@
     position:relative;
     width: 100vw;
     height: 15vh;
-    background-color: #ff8c00;
+    background-color:rgba(234, 230, 255, 0.5);
     display: flex; 
     align-items: center;
 }
 
 .Navbar .logo{
-    width: 50px;
+    width: 180px;
     margin-left: 25px;
 }
 
@@ -21,17 +21,33 @@
 .login{
     display: flex;
     position: relative;
-    left: 72vw;
+    left: 62vw;
 }
 
 
-.Navbar a{
+.Navbar a:first-child{
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     font-size: 1.2rem;
-    color: black;
+    color: rgba(0, 101, 255, 0.8);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font: none;
+    text-decoration: none;
+    padding: 15px;
+
+    border-radius: 12px;
+}
+
+.Navbar a:last-child{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
     font: none;
@@ -43,5 +59,5 @@
 
 
 .buttonAnimate{
-    background-color: rgba(0, 255, 55, 0.8);
+    background-color: rgba(0, 101, 255, 0.8);
 }

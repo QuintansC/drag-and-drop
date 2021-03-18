@@ -5,6 +5,72 @@
     left: 0;
     top: 0;
     width: 100vw;
-    background-color: aqua;
     height: 100%;
+    background-color: #eae6ff;
 }
+
+.Image{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background: url(./../../../images/hero.png) no-repeat;
+    background-position: 60rem 12rem; /* Center the image */
+    background-size: 350px, 350px ;
+    display: flex;
+    flex-direction: column;
+}
+
+.Image h2{
+    position: relative;
+    margin-top: 12%;
+    font-size: 2.7rem;
+    color: black;
+    width: 40%;
+    left: 10%;
+    margin-bottom: 0;
+}
+
+.Image p{
+    position: relative;
+    font-size: 1.3rem;
+    color: black;
+    width: 40%;
+    left: 10%;
+}
+
+.cadUni{
+    display: flex;
+    position: relative;
+    left: 10%;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.cadUni input[type=text]{
+    width: 60%;
+    height: 2.5rem;
+    border-style: none;
+    border-radius: 8px;
+}
+.cadUni input[type=text]::-webkit-input-placeholder{
+    position: relative;
+    top:5%;
+    left: 5%;
+    bottom: 5%;
+    font-size: 1.1rem;
+}
+
+
+
+.cadUni a {
+    font-size: 1rem !important;
+    font-weight:300;
+    height: 0.9rem;
+    width: 30%;
+    color: white;
+}
+
