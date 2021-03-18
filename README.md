@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Recriando o Trello
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="src/images/README/home.png" width='150px' height='150px'>
 
 ## Available Scripts
 
