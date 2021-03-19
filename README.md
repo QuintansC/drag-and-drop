@@ -37,9 +37,8 @@ Indices da aplicação
 <br>
 Tecnologias utilizadas:<br>
 
-<a href="https://google.com"> <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)"/></a>
-
-<a href="https://google.com"><img src="https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react"/></a>
+<a href="https://google.com">![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)</a>
+<a href="https://google.com">![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)</a>
 <a href="https://google.com">![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)</a>
 <a href="https://google.com">![Badge](https://img.shields.io/badge/-Typescript-000000?style=for-the-badge&logo=typescript)</a>
 
