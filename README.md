@@ -1,14 +1,23 @@
 # Recriando o Interface do Trello
 
 Interface do Trello sendo utilizada para estilização de um projeto Kanban
-<br>
-Tecnologias utilizadas:<br>
-![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)
-![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)
-![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)
-
 
 ## Detalhes da aplicação
+
+Indices da aplicação
+=================
+<!--ts-->
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Instalação](#instalacao)
+   * [Como usar](#como-usar-a-aplicação)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tecnologias](#tecnologias)
+<!--te-->
 
 <details>
   <summary>Telas da aplicação</summary>
@@ -17,12 +26,22 @@ Tecnologias utilizadas:<br>
     <img src="src/images/README/home.png" width='340px' height='150px'>
 </details>
 
-Comandos para rodar aplicação
+
+
+## Tecnologias
+
+<br>
+Tecnologias utilizadas:<br>
+![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)
+![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)
+![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)
+
+
+##  Como usar a aplicação
 
 ### `yarn start`
+Para executar a aplicação em modo de desenvolvedor, ela abrirá em [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
