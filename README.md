@@ -1,4 +1,11 @@
 # Recriando o Interface do Trello
+https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>&style=<STYLE>&logo=<LOGO>
+
+Interface do Trello sendo utilizada para estilização de um projeto Kanban feito em 
+
+
+
+## Available Scripts
 
 <details>
   <summary>Telas da aplicação</summary>
@@ -6,9 +13,6 @@
     <img src="src/images/README/home.png" width='340px' height='150px'>
     <img src="src/images/README/home.png" width='340px' height='150px'>
 </details>
-
-
-## Available Scripts
 
 In the project directory, you can run:
 
