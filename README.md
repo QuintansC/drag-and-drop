@@ -5,16 +5,11 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 Indices da aplicação
 =================
 <!--ts-->
-   * [Sobre](#Sobre)
    * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Tecnologias](#tecnologias)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar-a-aplicação)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tecnologias](#tecnologias)
+   * [Sobre](#Detalhes-da-aplicação)
 <!--te-->
 
 <details>
