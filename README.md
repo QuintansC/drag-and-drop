@@ -1,6 +1,12 @@
-# Recriando o Trello
+# Recriando o Interface do Trello
 
-<img src="src/images/README/home.png" width='350px' height='150px'>
+<details>
+  <summary>The title of the image group</summary><details>
+    <img src="src/images/README/home.png" width='340px' height='150px'>
+    <img src="src/images/README/home.png" width='340px' height='150px'>
+    <img src="src/images/README/home.png" width='340px' height='150px'>
+</details>
+
 
 ## Available Scripts
 

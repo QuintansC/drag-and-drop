@@ -22,6 +22,7 @@
     display: flex;
     position: relative;
     left: 62vw;
+    z-index: 1000;
 }
 
 
@@ -34,8 +35,6 @@
     color: rgba(0, 101, 255, 0.8);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
-    font: none;
-    text-decoration: none;
     padding: 15px;
 
     border-radius: 12px;
@@ -50,8 +49,6 @@
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
-    font: none;
-    text-decoration: none;
     padding: 15px;
 
     border-radius: 12px;
