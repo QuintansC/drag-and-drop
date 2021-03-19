@@ -16,10 +16,10 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 Indices da aplicação
 =================
 <!--ts-->
-   * [Features](#tabela-de-conteudo)
+   * [Features](#Features)
    * [Tecnologias](#tecnologias)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar-a-aplicação)
+   * [Instalação](#instalação)
+   * [Como usar](#comandos)
    * [Sobre](#Detalhes-da-aplicação)
 <!--te-->
 
@@ -37,13 +37,38 @@ Indices da aplicação
 <br>
 Tecnologias utilizadas:<br>
 
-![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)
+<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)"/>
+
 ![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)
 ![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)
 ![Badge](https://img.shields.io/badge/-Typescript-000000?style=for-the-badge&logo=typescript)
 
+### Pré-requisitos
 
-##  Como usar a aplicação
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/) 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Instalação
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/QuintanC/drag-and-drop>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd drag-and-drop
+
+# Instale as dependências
+$ yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3000>
+```
+
+
+##  Comandos
 
 ### `yarn start`
 Para executar a aplicação em modo de desenvolvedor, ela abrirá em [http://localhost:3000](http://localhost:3000)
