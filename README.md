@@ -1,7 +1,8 @@
 # Recriando o Interface do Trello
 
-Interface do Trello sendo utilizada para estilização de um projeto Kanban feito em 
-![Badge](https://img.shields.io/badge/Blog-Gustavo-%237159c1?style=for-the-badge&logo=visual-studio-code)
+Interface do Trello sendo utilizada para estilização de um projeto Kanban
+> Tecnologias utilizadas:
+![Badge](https://img.shields.io/badge/VisualStudio Code-%237159c1?style=for-the-badge&logo=visual-studio-code)
 
 
 ## Available Scripts
