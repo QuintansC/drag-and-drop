@@ -2,10 +2,10 @@
 
 Interface do Trello sendo utilizada para estilização de um projeto Kanban
 Tecnologias utilizadas:
-![Badge](https://img.shields.io/badge/VisualStudioCode--%FFFFFF?style=for-the-badge&logo=visual-studio-code)
+![Badge](https://img.shields.io/badge/VisualStudioCode%FFFFFF?style=for-the-badge&logo=visual-studio-code)
 
 
-## Available Scripts
+## Detalhes da aplicação
 
 <details>
   <summary>Telas da aplicação</summary>
