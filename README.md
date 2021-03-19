@@ -2,12 +2,6 @@
 
 Interface do Trello sendo utilizada para estilização de um projeto Kanban
 
-<br>
-Tecnologias utilizadas:<br>
-![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)
-![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)
-![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)
-
 Indices da aplicação
 =================
 <!--ts-->
@@ -24,6 +18,18 @@ Indices da aplicação
     <img src="src/images/README/home.png" width='340px' height='150px'>
     <img src="src/images/README/home.png" width='340px' height='150px'>
 </details>
+
+
+
+## Tecnologias
+
+<br>
+Tecnologias utilizadas:<br>
+
+![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)
+![Badge](https://img.shields.io/badge/-React%20JS-6100FB?style=for-the-badge&logo=react)
+![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)
+
 
 ##  Como usar a aplicação
 
