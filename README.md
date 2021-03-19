@@ -1,7 +1,7 @@
 # Recriando o Interface do Trello
 
 <details>
-  <summary>The title of the image group</summary><details>
+  <summary>Telas da aplicação</summary>
     <img src="src/images/README/home.png" width='340px' height='150px'>
     <img src="src/images/README/home.png" width='340px' height='150px'>
     <img src="src/images/README/home.png" width='340px' height='150px'>
