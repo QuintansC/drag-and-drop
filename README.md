@@ -2,7 +2,7 @@
 
 Interface do Trello sendo utilizada para estilização de um projeto Kanban
 Tecnologias utilizadas:
-![Badge](https://img.shields.io/badge/VisualStudioCode%FFFFFF?style=for-the-badge&logo=visual-studio-code)
+![Badge](https://img.shields.io/badge/-VisualStudioCode%FFFFFF?style=for-the-badge&logo=visual-studio-code)
 
 
 ## Detalhes da aplicação
@@ -14,7 +14,7 @@ Tecnologias utilizadas:
     <img src="src/images/README/home.png" width='340px' height='150px'>
 </details>
 
-In the project directory, you can run:
+Comandos para rodar aplicação
 
 ### `yarn start`
 
