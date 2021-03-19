@@ -2,6 +2,10 @@
 
 Interface do Trello sendo utilizada para estilização de um projeto Kanban
 
+<h4 align="center"> 
+	🚧  React Kanban 🚀 Em construção...  🚧
+</h4>
+
 Indices da aplicação
 =================
 <!--ts-->
