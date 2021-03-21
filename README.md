@@ -66,4 +66,6 @@ $ yarn start
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 ## Detalhes da aplicação  
+## `Qualquer ajuda será bem vinda!` 
+<br>
 Ainda em desenvolvimento, o objetivo é a organização de maneira simples onde você pode se divertir fazendo suas obrigações e ouvindo uma musica sendo extremamente produtivo.
