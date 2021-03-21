@@ -63,23 +63,7 @@ $ yarn
 # Execute a aplicação em modo de desenvolvimento
 $ yarn start
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3000>
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
-
-
-##  Comandos
-
-### `yarn start`
-Para executar a aplicação em modo de desenvolvedor, ela abrirá em [http://localhost:3000](http://localhost:3000)
-
-### `yarn test`
-
-Para executar em modo de teste
-Observe a seção de testes [Testes](https://facebook.github.io/create-react-app/docs/running-tests) para Mais informações.
-
-### `yarn build`
-
-Construir o app para produção e `construir` a pastas .\
-Fazer isso trará desempenho pra aplicação de produção
-
-## Detalhes da aplicação
+## Detalhes da aplicação  
+Ainda em desenvolvimento, o objetivo é a organização de maneira simples onde você pode se divertir fazendo suas obrigações e ouvindo uma musica legal.
