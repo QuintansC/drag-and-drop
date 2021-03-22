@@ -69,3 +69,4 @@ $ yarn start
 ## `Qualquer ajuda será bem vinda!` 
 <br>
 Ainda em desenvolvimento, o objetivo é a organização de maneira simples onde você pode se divertir fazendo suas obrigações e ouvindo uma musica sendo extremamente produtivo.
+O que você acha que está faltando? alguma dica entre contato.
