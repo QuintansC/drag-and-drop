@@ -36,9 +36,11 @@ export default function Login(props: any){
                     <input type="text" onChange={enviaForm}></input>
                     <span>Senha</span>
                     <input type="password" onChange={enviaForm}></input>
+                    <span>Confirmar Senha</span>
+                    <input type="password" onChange={enviaForm}></input>
                     
                     <input className="conectado" type="checkbox"></input>
-                    <span className="textConectado">Manter-se Conectado?</span>
+                    <span className="textConectado">Concordo com os termos e condições</span>
                     <input className="submitButton" type="button" value="Entrar"></input>
                 </form>
             </div>
