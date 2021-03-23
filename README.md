@@ -28,7 +28,7 @@ Indices da aplicação
 <details>
   <summary>Telas da aplicação</summary>
     <img src="src/images/README/home.png" width='340px' height='150px'>
-    <img src="src/images/README/home.png" width='340px' height='150px'>
+    <img src="src/images/README/cadastro.png" width='340px' height='150px'>
     <img src="src/images/README/home.png" width='340px' height='150px'>
 </details>
 
