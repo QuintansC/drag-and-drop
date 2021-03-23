@@ -7,11 +7,11 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 </h4>
 
 ### Em desenvolvimento
-- [x] Cadastro
+- [x] Login
 ### Features
 
 - [x] Home
-- [ ] Cadastro
+- [x] Cadastro
 - [ ] Login
 - [ ] Dashboard
 
