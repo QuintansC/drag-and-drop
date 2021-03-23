@@ -6,6 +6,8 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 	🚧  React Kanban 🚀 Em construção...  🚧
 </h4>
 
+### Em desenvolvimento
+- [ ] Cadastro
 ### Features
 
 - [x] Home
