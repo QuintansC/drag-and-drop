@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import '../../styles/components/initial/Login.css';
+import Logo from './../../images/Trello-Logo.svg';
+import Google from './../../images/google.svg';
+import Microsoft from './../../images/Microsoft.svg';
+import Apple from './../../images/Apple.svg';
 
 
 export default function Login(props: any){
@@ -30,16 +34,21 @@ export default function Login(props: any){
 
     return(
         <div className="loginContent">
+            <img alt="logo" src={Logo}/>
             <div className="form">
                 <form method="POST">
+                    <h2>Crie sua conta</h2>
                     <span>Usuário</span>
                     <input type="text" onChange={enviaForm}></input>
                     <span>Senha</span>
                     <input type="password" onChange={enviaForm}></input>
-                    
-                    <input className="conectado" type="checkbox"></input>
-                    <span className="textConectado">Manter-se Conectado?</span>
-                    <input className="submitButton" type="button" value="Entrar"></input>
+                    <div>
+                        <button className="submitButto" type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }}>Fazer Login</button>
+                        <h3 className="textConectado">Ou</h3>                  
+                        <button className="submitButto" type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
+                        <button className="submitButto" type="button" ><img src={Microsoft} alt=""/> Conectar com a Microsoft</button>
+                        <button className="submitButto" type="button" ><img src={Apple} alt=""/> Conectar com a Apple</button>
+                    </div>
                 </form>
             </div>
         </div>
