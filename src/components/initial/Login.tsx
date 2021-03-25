@@ -4,13 +4,16 @@ import Logo from './../../images/Trello-Logo.svg';
 import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
-
+import { Redirect } from 'react-router';
 
 export default function Login(props: any){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
     const [check, setCheck] = useState(false);
 
+    function loga(){
+        props.history.push("/dashboard");
+    }
     function enviaForm(){
         var queris = document.querySelectorAll('input');
         queris.forEach((element) =>{
@@ -43,7 +46,7 @@ export default function Login(props: any){
                     <span>Senha</span>
                     <input type="password" onChange={enviaForm}></input>
                     <div>
-                        <button className="submitButto" type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }}>Fazer Login</button>
+                        <button className="submitButto" type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>loga()}>Fazer Login</button>
                         <h3 className="textConectado">Ou</h3>                  
                         <button className="submitButto" type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
                         <button className="submitButto" type="button" ><img src={Microsoft} alt=""/> Conectar com a Microsoft</button>
