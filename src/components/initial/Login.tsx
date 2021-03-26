@@ -4,7 +4,8 @@ import Logo from './../../images/Trello-Logo.svg';
 import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
-import { Redirect } from 'react-router';
+import api from '../../backend/api';
+import { render } from '@testing-library/react';
 
 export default function Login(props: any){
     const [login, setLogin] = useState('');
@@ -12,8 +13,25 @@ export default function Login(props: any){
     const [check, setCheck] = useState(false);
 
     function loga(){
-        props.history.push("/dashboard");
+        try{
+            api.post('/api/login',{
+                user: login,
+                password: senha,
+            }).then(res=> {
+                if(res.status===202){
+                    props.history.push("/dashboard");
+                }else if(res.status===406){
+                    console.log('Login incorreto');
+                }else{
+                    console.log(res.data.message);
+                }
+            });
+        }
+        catch{
+            //error message
+        }       
     }
+
     function enviaForm(){
         var queris = document.querySelectorAll('input');
         queris.forEach((element) =>{

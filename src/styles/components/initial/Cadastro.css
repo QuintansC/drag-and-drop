@@ -2,7 +2,7 @@
     position: absolute;
     padding-left: 0px;
     width: 100.2%;
-    height: 140%;
+    height: 160%;
     background: url(./../../../images/Trello.png) 0% 50% no-repeat fixed;
     background-size: 100% 100%;
     top: 0vh;
@@ -14,7 +14,7 @@
 
 .cadastroContent .form{
     position: relative;
-    height: 90%;
+    height: 100%;
     width: 25%;
     background-color: #FFFFFF;
     box-shadow: 1px 1px 10px black;
@@ -26,11 +26,13 @@
 }
 
 
-.cadastroContent .form input[type=text]{
-    position: absolute;
-    top:25%;
+.cadastroContent .form input{
+    position: relative;
+    top:5%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 8%;
+    width: 80%;
 }
 
 .cadastroContent .form h2{
@@ -55,13 +57,6 @@ h3 {
     width: 30%;
 }
 
-.conectado{
-    position: absolute;
-    left: 12%;
-    top: 67%;
-    padding: 0;
-    margin: 0;
-}
 
 .submitButtons{
     position: relative;
@@ -82,7 +77,7 @@ h3 {
 p{
    position: absolute;
    font-size: 12px;
-   top: 30%;
+   top: 40%;
    left: 35px;
    width: 80%;
    display: flex;
@@ -93,7 +88,7 @@ p{
 
 form div{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     width: 100%;
     transform: translate(-42%, -0%);
