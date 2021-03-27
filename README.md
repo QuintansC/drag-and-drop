@@ -14,6 +14,7 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 - [x] Cadastro
 - [x] Login
 - [ ] Dashboard
+- [ ] Actions
 
 Indices da aplicação
 =================
