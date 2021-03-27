@@ -4,7 +4,7 @@ import {Cards} from './Cards';
 import { NavComponents } from './NavComponents';
 import '../../styles/App.css';
 function Dashboard() {
-  //App não tem mais estados
+  //Estados necessarios para a dashboard
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);

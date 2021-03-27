@@ -12,9 +12,10 @@ export function NavComponents(){
   const [animateButton, setAnimateButton] = useState(false);
 
   function newArchive(){
-    
+    //criar novo arquivo
   }
 
+  //Animações do botão
   async function buttonAnimate({target}: any) {
     animateButton?setAnimateButton(false):setAnimateButton(true);
     await target.classList.add('buttonAnimate');

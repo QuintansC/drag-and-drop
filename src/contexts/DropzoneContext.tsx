@@ -11,6 +11,7 @@ interface DropzoneContextData{
 }
 export const DropzoneContext = createContext({} as DropzoneContextData);
 
+//Contextos da aplicação
 export function DropzoneProvider({children}: DropzoneProviderProps){
     const [dropzoneEnabled, setDropzoneEnabled] = useState(false);
     function enableDropzone(){
