@@ -59,17 +59,14 @@ export function Cards (props: CardProps){
     }, [props.hora.seconds]);
 
     function dragstart({target} :any){
-        //console.log('Card: start Drag'); 
         enableDropzone();
         target.classList.add('isDragging');
       }
     
       function drag(){
-        //console.log('Card: is Dragging');
       }
     
       function dragend({target}: any){
-        //console.log('Card: end Drag');
         disableDropzone();
         target.classList.remove('isDragging');
       }

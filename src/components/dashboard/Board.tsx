@@ -13,12 +13,9 @@ export function Board({name, children}: BoardProps){
 
   //Funções da dropzone
   const { dropzoneEnabled } = useContext(DropzoneContext);
-    function dragEnter(){
-        //console.log('DropZone: Enter in drop Zone');
-      }
+    function dragEnter(){}
     
       function dragOver({target}: any){
-        //console.log('DropZone: Over');
         target.classList.add('over');
         try {
           const cardDragging = document.querySelector('.isDragging');
@@ -30,12 +27,10 @@ export function Board({name, children}: BoardProps){
       }
     
       function dragLeave({target}: any){
-        //console.log('DropZone: Leave');
         target.classList.remove('over');
       }
     
       function drop({target}: any){
-        //console.log('DropZone: Drop');
         target.classList.remove('over');
       }
 
