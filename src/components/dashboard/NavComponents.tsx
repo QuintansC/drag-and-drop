@@ -1,4 +1,3 @@
-
 import '../../styles/components/NavComponents.css';
 import More from '../../images/more.svg';
 import Save from '../../images/save.svg';
@@ -7,7 +6,6 @@ import Logout from '../../images/logout.svg';
 
 import Gamepad from '../../images/gamepad.svg';
 import {useState } from 'react';
-
 
 export function NavComponents(){
 

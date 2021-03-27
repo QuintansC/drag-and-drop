@@ -5,12 +5,10 @@ import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 import api from '../../backend/api';
-import { render } from '@testing-library/react';
 
 export default function Login(props: any){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-    const [check, setCheck] = useState(false);
 
     function loga(){
         try{
@@ -41,14 +39,6 @@ export default function Login(props: any){
 
             if(element.type === 'password'){
                 setSenha(element.value);
-            }
-
-            if(element.type === 'checkbox'){
-                if(element.checked){
-                    setCheck(true);
-                }else{
-                    setCheck(false);
-                }
             }
         });
     }

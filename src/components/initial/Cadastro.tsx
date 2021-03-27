@@ -6,7 +6,6 @@ import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 import api from '../../backend/api';
 
-
 export default function Cadastrar(props: any){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
