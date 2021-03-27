@@ -59,14 +59,15 @@ export function Cards (props: CardProps){
   }, [props.hora.seconds]);
 
   function dragstart({target} :any){
+    //Começa o drag
     enableDropzone();
     target.classList.add('isDragging');
   }
   
-  function drag(){
-  }
+  function drag(){}
   
   function dragend({target}: any){
+    //Termina o drag
     disableDropzone();
     target.classList.remove('isDragging');
   }

@@ -15,6 +15,7 @@ export function Board({name, children}: BoardProps){
   function dragEnter(){}
   
   function dragOver({target}: any){
+    //Quando estiver em cima da zona de drop
     target.classList.add('over');
     try {
       const cardDragging = document.querySelector('.isDragging');
@@ -26,10 +27,12 @@ export function Board({name, children}: BoardProps){
   }
   
   function dragLeave({target}: any){
+    //Quando sair do drag
     target.classList.remove('over');
   }
 
   function drop({target}: any){
+    //Quando for dropano na area
     target.classList.remove('over');
   }
 
