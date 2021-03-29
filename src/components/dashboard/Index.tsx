@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import {Board} from './Board';
 import {Cards} from './Cards';
 import { NavComponents } from './NavComponents';
 import '../../styles/App.css';
-function Dashboard() {
+import { DropzoneContext } from '../../contexts/DropzoneContext';
+function Dashboard() { 
+  const {token} = useContext(DropzoneContext) ;
+  console.log(token);
   //Estados necessarios para a dashboard
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);

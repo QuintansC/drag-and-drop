@@ -6,14 +6,17 @@ interface DropzoneProviderProps{
 
 interface DropzoneContextData{
     dropzoneEnabled: boolean,
+    token: string,
     enableDropzone: () => void,
     disableDropzone: () => void,
+    setToken: (tokens: string) => void,
 }
 export const DropzoneContext = createContext({} as DropzoneContextData);
 
 //Contextos da aplicação
 export function DropzoneProvider({children}: DropzoneProviderProps){
     const [dropzoneEnabled, setDropzoneEnabled] = useState(false);
+    const [token, setTokens] = useState('');
     function enableDropzone(){
         setDropzoneEnabled(true);
     }
@@ -21,12 +24,19 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
     function disableDropzone(){
         setDropzoneEnabled(false);
     }
+
+    function setToken(tokens: string){
+        setTokens(tokens);
+    }
     return(
         <DropzoneContext.Provider 
             value={{
                 dropzoneEnabled,
+                token,
                 enableDropzone,
-                disableDropzone,              
+                disableDropzone,
+                setToken, 
+                             
             }}
         >
             {children}

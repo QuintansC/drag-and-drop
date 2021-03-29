@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import '../../styles/components/initial/Login.css';
 import Logo from './../../images/Trello-Logo.svg';
 import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 import api from '../../backend/api';
+import { DropzoneContext } from '../../contexts/DropzoneContext';
 
 export default function Login(props: any){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
+
+    const {setToken} = useContext(DropzoneContext) ;
 
     function loga(){
         try{
@@ -18,6 +21,7 @@ export default function Login(props: any){
             }).then(res=> {
                 if(res.status===202){
                     props.history.push("/dashboard");
+                    setToken(res.data.token)
                 }else if(res.status===406){
                     console.log('Login incorreto');
                 }else{
