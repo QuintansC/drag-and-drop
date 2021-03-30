@@ -4,8 +4,9 @@ import {Cards} from './Cards';
 import { NavComponents } from './NavComponents';
 import '../../styles/App.css';
 import { DropzoneContext } from '../../contexts/DropzoneContext';
-function Dashboard() { 
-  const {token} = useContext(DropzoneContext) ;
+
+function Dashboard(props: any){ 
+  const {token} = useContext(DropzoneContext);
   console.log(token);
   //Estados necessarios para a dashboard
   const [seconds, setSeconds] = useState(0);
@@ -27,25 +28,34 @@ function Dashboard() {
     setHours(hours + 1);
     setMinutes(0);
   }
-  return (
-    <div className="cont">
-      <NavComponents/>
-      <div className="boards">
 
-        <Board name="To Do">
-          <Cards hora={{hours, minutes, seconds}} color="red" content="Terminar a aplicação"/>
-        </Board> 
+  if(token !== ''){
+    return (
+      <div className="cont">
+        <NavComponents/>
+        <div className="boards">
 
-        <Board name="In progress">
-          <Cards hora={{hours, minutes, seconds}} color="blue" content="Programando a aplicação"/>
-        </Board> 
+          <Board name="To Do">
+            <Cards hora={{hours, minutes, seconds}} color="red" content="Terminar a aplicação"/>
+          </Board> 
 
-        <Board name="Done">
-          <Cards hora={{hours, minutes, seconds}} color="green" content="Aplicação final"/>
-        </Board>
+          <Board name="In progress">
+            <Cards hora={{hours, minutes, seconds}} color="blue" content="Programando a aplicação"/>
+          </Board> 
+
+          <Board name="Done">
+            <Cards hora={{hours, minutes, seconds}} color="green" content="Aplicação final"/>
+          </Board>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }else{
+    return (
+      <div>
+        {props.history.push('/')}
+      </div>
+    )
+  }
 }
 
 export default Dashboard;
