@@ -26,6 +26,7 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
     }
 
     function setToken(tokens: string){
+        //Setar nos cookies
         setTokens(tokens);
     }
     return(

@@ -5,13 +5,10 @@ import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 import api from '../../backend/api';
-import { DropzoneContext } from '../../contexts/DropzoneContext';
 
 export default function Login(props: any){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-
-    const {setToken} = useContext(DropzoneContext) ;
 
     function loga(){
         try{
@@ -20,8 +17,9 @@ export default function Login(props: any){
                 password: senha,
             }).then(res=> {
                 if(res.status===202){
-                    props.history.push("/dashboard");
-                    setToken(res.data.token)
+                    props.history.push("/dashboard", {
+                        token: res.data.token
+                    });  
                 }else if(res.status===406){
                     console.log('Login incorreto');
                 }else{
