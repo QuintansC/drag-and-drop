@@ -86,7 +86,7 @@ p{
    text-align: center;
 }
 
-form div{
+.form div{
     position: absolute;
     top: 55%;
     left: 50%;
