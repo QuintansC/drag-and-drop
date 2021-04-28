@@ -18,7 +18,7 @@ export default function Login(props: any){
             }).then(res=> {
                 if(res.status===202){
                     props.history.push("/dashboard", {
-                        token: res.data.token
+                        token: res.data.jwt
                     });  
                 }else if(res.status===406){
                     console.log('Login incorreto');

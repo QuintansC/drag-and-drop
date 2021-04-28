@@ -14,8 +14,8 @@ function Dashboard(props: any){
 
   useEffect(()=>{
     setToken(props.location.state.token);
-    console.log(props.location.state.token);
-  }, [])
+    console.log(token);
+  }, []);
 
   useEffect(()=>{
     setTimeout(()=>{
