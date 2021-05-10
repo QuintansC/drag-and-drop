@@ -1,4 +1,4 @@
-import { ReactNode, useContext } from 'react';
+import { ReactNode, useContext, useState } from 'react';
 import '../../styles/components/Board.css'
 
 import { DropzoneContext } from '../../contexts/DropzoneContext';
@@ -12,18 +12,23 @@ interface BoardProps{
 export function Board({name, children}: BoardProps){
   //Funções da dropzone
   const { dropzoneEnabled } = useContext(DropzoneContext);
-  function dragEnter(){}
+  function dragEnter({target}: any){}
   
   function dragOver({target}: any){
     //Quando estiver em cima da zona de drop
+    var test = target.children;
+    var cards = document.getElementsByClassName('card')
     target.classList.add('over');
-    try {
-      const cardDragging = document.querySelector('.isDragging');
-      target.appendChild(cardDragging);
-    } catch (error) {
-      //message error
-    }
     
+    if(test[0] === cards[0] || test[0] === cards[1] || test[0] === cards[2] || test.length < 1){
+      try {
+        const cardDragging = document.querySelector('.isDragging');
+        target.classList.add('over');
+        target.appendChild(cardDragging);
+      } catch (error) {
+        //message error
+      }
+    }  
   }
   
   function dragLeave({target}: any){

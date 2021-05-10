@@ -79,9 +79,9 @@ export function Cards (props: CardProps){
       draggable="true"
       onDragStart={dragstart}
       onDrag={drag}
-      onDragEnd={dragend}
+      onDragEnd={dragend}      
     >
-      <div className={`${'status'} ${props.color}`}></div>
+      <div className={`${'status'} ${props.color}`} draggable={false}></div>
       <div className="content">{props.content}<br></br>Hora: {isHours?hours:hou}:{isMinute?minute:min}:{isSeconds?seconds:sec}</div>
     </div>
   );
