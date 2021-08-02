@@ -6,11 +6,13 @@ import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 import api from '../../services/api';
 
-export default function Login(props: any){
+import { LoginType } from '../../types';
+
+export default function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
 
-    function loga(){
+    function logar(){
         try{
             api.post('/api/login',{
                 user: login,
@@ -18,7 +20,7 @@ export default function Login(props: any){
             }).then(res=> {
                 if(res.status===202){
                     props.history.push("/dashboard", {
-                        token: res.data.jwt
+                        token: res.data.token
                     });  
                 }else if(res.status===406){
                     console.log('Login incorreto');
@@ -56,7 +58,7 @@ export default function Login(props: any){
                     <span>Senha</span>
                     <input type="password" onChange={enviaForm}></input>
                     <div>
-                        <button className={styles.submitButto} type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>loga()}>Fazer Login</button>
+                        <button className={styles.submitButto} type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>logar()}>Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
                         <button className={styles.submitButto} type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
                         <button className={styles.submitButto} type="button" ><img src={Microsoft} alt=""/> Conectar com a Microsoft</button>
