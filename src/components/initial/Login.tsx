@@ -7,30 +7,33 @@ import Apple from './../../images/Apple.svg';
 import api from '../../services/api';
 
 import { LoginType } from '../../types';
+import { useHistory } from 'react-router-dom';
 
-export default function Login(props: LoginType){
+export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
+    const history = useHistory();
+    const [message, setMessage] = useState('');
 
-    function logar(){
+    async function logar(){
         try{
-            api.post('/api/login',{
+            await api.post('/api/login',{
                 user: login,
                 password: senha,
             }).then(res=> {
                 if(res.status===202){
-                    props.history.push("/dashboard", {
+                    history.push("/dashboard", {
                         token: res.data.token
                     });  
                 }else if(res.status===406){
-                    console.log('Login incorreto');
+                   setMessage('Login incorreto');
                 }else{
-                    console.log(res.data.message);
+                    setMessage("mensagem de erro");
                 }
             });
         }
         catch{
-            //error message
+            setMessage("mensagem de erros");
         }       
     }
 
@@ -50,17 +53,18 @@ export default function Login(props: LoginType){
     return(
         <div className={styles.loginContent}>
             <img alt="logo" src={Logo}/>
+            <p>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
                     <h2>Crie sua conta</h2>
                     <span>Usuário</span>
-                    <input type="text" onChange={enviaForm}></input>
+                    <input data-testid="user" type="text" onChange={enviaForm}></input>
                     <span>Senha</span>
-                    <input type="password" onChange={enviaForm}></input>
+                    <input title="password" type="password" onChange={enviaForm}></input>
                     <div>
-                        <button className={styles.submitButto} type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>logar()}>Fazer Login</button>
+                        <button name="enviar" className={styles.submitButto} type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>logar()}>Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
-                        <button className={styles.submitButto} type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
+                        <button name="google" className={styles.submitButto} type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
                         <button className={styles.submitButto} type="button" ><img src={Microsoft} alt=""/> Conectar com a Microsoft</button>
                         <button className={styles.submitButto} type="button" ><img src={Apple} alt=""/> Conectar com a Apple</button>
                     </div>

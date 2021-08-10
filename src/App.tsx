@@ -1,4 +1,4 @@
-import Routes from './Routes/routes';
+import Routes from './routes';
 const App = ()=>  <Routes />;
 
 export default App;

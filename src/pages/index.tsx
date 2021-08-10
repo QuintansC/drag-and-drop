@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import styles from '../../styles/components/initial/Home.module.css';
-import { Navbar } from './NavBar';
+import styles from '../styles/components/initial/Home.module.css';
+import { Navbar } from '../components/initial/NavBar';
 export default function Home(){
     return(
         <div className={styles.HomeContent}>

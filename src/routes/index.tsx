@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../components/initial/Home';
+import Home from '../pages';
 import Login from '../components/initial/Login';
 import Cadastro from '../components/initial/Cadastro';
 import Dashboard from '../components/dashboard/Index';
