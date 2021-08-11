@@ -1,7 +1,7 @@
-import { fireEvent } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import Login from '../components/initial/Login'
-import { render, screen } from './index'
+import { render, screen, userEvent, fireEvent } from './index'
+import { renderHook, act } from '@testing-library/react-hooks'
+import useLogin from '../hooks/login'
 
 const userExpect = "admin" 
 const passwordExpect = "123456" 
@@ -21,7 +21,6 @@ describe('Componente Login', ()=>{
         expect(password).toHaveValue('');
         
     })
-
     test('Deve verificar se estão sendo enviadas as informações de login', ()=>{
         render(<Login />)  
         const {user, password} = callComponents()
@@ -35,13 +34,9 @@ describe('Componente Login', ()=>{
         expect(user).toHaveValue(userExpect);
         expect(password).toHaveValue(passwordExpect);
     })
-
-    test('Deve testar se o click chama o hook Auth', async ()=>{
+    test('Deve verificar se as informações de login', async ()=>{
         render(<Login />)  
         const {user, password} = callComponents()
-
-        expect(user).toHaveValue('');
-        expect(password).toHaveValue('');
 
         fireEvent.change(user, {target: {value: userExpect}})
         fireEvent.change(password, {target: {value: passwordExpect}})
@@ -51,7 +46,8 @@ describe('Componente Login', ()=>{
 
         const button = screen.getByText('Fazer Login')
         userEvent.click(button)
-
-        expect(await screen.findByText('mensagem de erros')).toBeInTheDocument()
+        
+        const response = await screen.findByText('Usuario não existe')
+        expect(response).toBeInTheDocument()
     })
 })
