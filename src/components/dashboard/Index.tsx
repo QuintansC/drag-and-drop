@@ -1,21 +1,16 @@
 import { useEffect, useState, useContext } from 'react';
-import {Board} from './Board';
-import {Cards} from './Cards';
+import { Board } from './Board';
+import { Cards } from './Cards';
 import { NavComponents } from './NavComponents';
 import '../../styles/App.css';
 import { DropzoneContext } from '../../contexts/DropzoneContext';
 
 function Dashboard(props: any){ 
-  const {token, setToken} = useContext(DropzoneContext);
+  const { token } = useContext(DropzoneContext);
   //Estados necessarios para a dashboard
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
-
-  useEffect(()=>{
-    setToken(props.location.state.token);
-    console.log(token);
-  }, []);
 
   useEffect(()=>{
     setTimeout(()=>{

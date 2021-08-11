@@ -1,41 +1,18 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import styles from '../../styles/components/initial/Login.module.css';
 import Logo from './../../images/Trello-Logo.svg';
 import Google from './../../images/google.svg';
 import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
-import api from '../../services/api';
+
+import useLogin  from '../../hooks/login'
 
 import { LoginType } from '../../types';
-import { useHistory } from 'react-router-dom';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-    const history = useHistory();
-    const [message, setMessage] = useState('');
-
-    async function logar(){
-        try{
-            await api.post('/api/login',{
-                user: login,
-                password: senha,
-            }).then(res=> {
-                if(res.status===202){
-                    history.push("/dashboard", {
-                        token: res.data.token
-                    });  
-                }else if(res.status===406){
-                   setMessage('Login incorreto');
-                }else{
-                    setMessage("mensagem de erro");
-                }
-            });
-        }
-        catch{
-            setMessage("mensagem de erros");
-        }       
-    }
+    const {signUp, message} = useLogin();
 
     function enviaForm(){
         var queris = document.querySelectorAll('input');
@@ -62,7 +39,17 @@ export default  function Login(props: LoginType){
                     <span>Senha</span>
                     <input title="password" type="password" onChange={enviaForm}></input>
                     <div>
-                        <button name="enviar" className={styles.submitButto} type="button" style={{marginTop: '50%', marginBottom: '-20%', backgroundColor: 'green' }} onClick={()=>logar()}>Fazer Login</button>
+                        <button 
+                            name="enviar" 
+                            className={styles.submitButto} 
+                            type="button" 
+                            style={{
+                                marginTop: '50%', 
+                                marginBottom: '-20%', 
+                                backgroundColor: 'green' 
+                            }} 
+                            onClick={()=>signUp(login, senha)}
+                        >Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
                         <button name="google" className={styles.submitButto} type="button" ><img src={Google} alt=""/> Conectar com o Google</button>
                         <button className={styles.submitButto} type="button" ><img src={Microsoft} alt=""/> Conectar com a Microsoft</button>
