@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 interface DropzoneProviderProps{
     children: ReactNode;
@@ -9,7 +9,8 @@ interface DropzoneContextData{
     token: string,
     enableDropzone: () => void,
     disableDropzone: () => void,
-    setToken: (tokens: string) => void,
+    setToken: (tokens: string, name: string) => void,
+    getToken: () => string,
 }
 export const DropzoneContext = createContext({} as DropzoneContextData);
 
@@ -17,6 +18,7 @@ export const DropzoneContext = createContext({} as DropzoneContextData);
 export function DropzoneProvider({children}: DropzoneProviderProps){
     const [dropzoneEnabled, setDropzoneEnabled] = useState(false);
     const [token, setTokens] = useState('');
+
     function enableDropzone(){
         setDropzoneEnabled(true);
     }
@@ -25,9 +27,17 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
         setDropzoneEnabled(false);
     }
 
-    function setToken(tokens: string){
+    function setToken(tokens: string, name: string){
         //Setar nos cookies
         setTokens(tokens);
+        localStorage.setItem('tokenTrello', tokens)
+        localStorage.setItem('usernameTrello', name)
+    }
+
+    function getToken(){
+        var token = localStorage.getItem('tokenTrello');
+        setTokens(token?token:'undefined');
+        return token?token:'undefined';
     }
     return(
         <DropzoneContext.Provider 
@@ -36,8 +46,8 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
                 token,
                 enableDropzone,
                 disableDropzone,
-                setToken, 
-                             
+                setToken,
+                getToken                             
             }}
         >
             {children}

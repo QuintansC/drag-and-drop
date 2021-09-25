@@ -13,8 +13,8 @@ export default function Cadastrar(props: any){
     function cada(){
         try{
             api.post('/api/cadastrar',{
-                email: email,
-                user: login,
+                email: email.toLocaleLowerCase(),
+                user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(res=> {
                 if(res.status===201){

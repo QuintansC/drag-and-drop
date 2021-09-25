@@ -1,72 +1,43 @@
 import '../../styles/components/NavComponents.css';
-import More from '../../images/more.svg';
-import Save from '../../images/save.svg';
-import Note from '../../images/noteadd.svg';
 import Logout from '../../images/logout.svg';
-
 import Gamepad from '../../images/gamepad.svg';
-import {useState } from 'react';
 
 export function NavComponents(){
-
-  const [animateButton, setAnimateButton] = useState(false);
-
-  function newArchive(){
-    //criar novo arquivo
-  }
-
-  //Animações do botão
-  async function buttonAnimate({target}: any) {
-    animateButton?setAnimateButton(false):setAnimateButton(true);
-    await target.classList.add('buttonAnimate');
-  }
-
- async function buttonAnimateDown({target}: any) {
-    animateButton?setAnimateButton(false):setAnimateButton(true);
-    await target.classList.remove('buttonAnimate');
-  }
-
-  async function removeClass({target}:any) {
-    await target.classList.remove('buttonAnimate');
-  }
-
   return(
     <nav className="NavContent">
-      <img src={Gamepad} alt="Logo" className="logo" />
-        <div className="comp">
+      <button className="menu" type="button"><img src="/menu.png"></img></button>
+      <img src="/logo.gif" alt="Trello" className="logo" />
+        <div className="links">
           <a 
             href="http://localhost:3000/"
-            onMouseEnter={buttonAnimate} 
-            onMouseLeave={buttonAnimateDown} 
-            onClick={newArchive}
+            className="buttonAnimate"
           >
-            Novo<img src={More} onMouseMove={removeClass} alt="new"/>
+            Área de trabalho<img src="/down-arrow.png"  alt="new"/>
           </a>  
 
           <a 
             href="http://localhost:3000/" 
-            onMouseEnter={buttonAnimate} 
-            onMouseLeave={buttonAnimateDown}
+            className="buttonAnimate"
           >
-            Salvar<img src={Save} onMouseMove={removeClass} alt="save"/>
+            Recente<img src="/down-arrow.png" alt="save"/>
           </a>
 
           <a 
             href="http://localhost:3000/" 
-            onMouseEnter={buttonAnimate} 
-            onMouseLeave={buttonAnimateDown}
+            className="buttonAnimate"
           >
-            Adicionar um card<img src={Note} onMouseMove={removeClass} alt="add card"/>
+            Marcado com estrela<img src="/down-arrow.png" alt="add cart"/>
           </a>
+
+          <button type="button"> <span>Criar</span> </button>
         </div>
 
         <div className="perfil">
           <a 
             href="http://localhost:3000/"
-            onMouseEnter={buttonAnimate} 
-            onMouseLeave={buttonAnimateDown}
+            className="buttonAnimate"
           >
-            Sair <img src={Logout} onMouseMove={removeClass} alt="logout"/>
+            Sair <img src={Logout} alt="logout"/>
           </a>
         </div>
     </nav>

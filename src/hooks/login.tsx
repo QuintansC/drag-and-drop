@@ -12,12 +12,13 @@ const useLogin = ()=>{
     async function signUp (login:string , senha:string){
         try{
             await api.post('/login',{
-                user: login,
+                user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(function(res){    
-                console.log(res.data)            
-                setToken(res.data.token)
-                setMessage(res.data.message)                
+                //console.log(res.data)            
+                setToken(res.data.token, login.toLocaleLowerCase())
+                setMessage(res.data.message)   
+                history.push(`${login}/boards`)             
             }).catch(function(err){
                 console.log(err.response.data)
                 setMessage(err.response.data.message)

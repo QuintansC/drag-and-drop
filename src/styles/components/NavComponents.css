@@ -1,18 +1,36 @@
 .NavContent{
     position:relative;
     width: 100vw;
-    height: 15vh;
-    background-color: #ff8c00;
+    height: 7vh;
+    background-color: #026AA7;
     display: flex; 
     align-items: center;
 }
 
 .NavContent .logo{
-    width: 50px;
-    margin-left: 25px;
+    width: 68px;
+    margin-left: 5px;
 }
 
-.comp{
+button.menu{
+    background-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: none;
+    height: 26px;
+    line-height: 1px;
+    margin: 2px 3px 2px 6px;
+    padding: 1px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.menu img{
+    height: 90%;
+}
+
+.links{
     display: flex;
     position: relative;
     left: 2vh;
@@ -23,31 +41,38 @@
     left: 40vw;
 }
 
-.NavContent .comp img{
+.NavContent .links img{
     font-size: 0;
     padding: 0;
     margin: 0;
     margin-left: 0.7rem;
-    width: 35px;
+    width: 15px;
 }
 
-.NavContent button, a{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    font-size: 1.5rem;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 700;
-    font: none;
-    text-decoration: none;
-    padding: 15px;
-
-    border-radius: 12px;
-}
-
-.NavContent button{
-    background-color: transparent;
+.NavContent .links button{ 
+    background-color: #025180;
+    color: white;
+    border-radius: 3px;
     border: 0;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: none;
+    color: #FFFFFF;
+    display: flex;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 4px 0 0;
+    padding: 0;
+}
+
+.NavContent button:hover{
+    background-color: #ffffff36;
+}
+
+
+.NavContent button span {
+    margin: 0;
+    font-weight: 400;
+    padding: 0 12px;
 }

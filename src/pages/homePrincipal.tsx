@@ -1,17 +1,20 @@
 import { useEffect, useState, useContext } from 'react';
-import { Board } from './Board';
-import { Cards } from './Cards';
-import { NavComponents } from './NavComponents';
-import '../../styles/App.css';
-import { DropzoneContext } from '../../contexts/DropzoneContext';
+import { Board } from '../components/dashboard/Board';
+import { Cards } from '../components/dashboard/Cards';
+import { NavComponents } from '../components/dashboard/NavComponents';
+import styles from '../styles/pages/homePrincipal.module.css';
+import { DropzoneContext } from '../contexts/DropzoneContext';
 
-function Dashboard(props: any){ 
+function HomePricipal(props: any){ 
   const { getToken } = useContext(DropzoneContext);
   //Estados necessarios para a dashboard
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [hours, setHours] = useState(0);
 
+  useEffect(()=>{
+    document.title = 'Quadros | Trello';
+  })
   useEffect(()=>{
     setTimeout(()=>{
       setSeconds(seconds + 1);
@@ -31,7 +34,7 @@ function Dashboard(props: any){
   var token = getToken()
   if(token !== 'undefined'){
     return (
-      <div className="cont">
+      <div className={`${styles.HomeContent} cont`}>
         <NavComponents/>
         <div className="boards">
 
@@ -58,4 +61,4 @@ function Dashboard(props: any){
   }
 }
 
-export default Dashboard;
+export default HomePricipal;
