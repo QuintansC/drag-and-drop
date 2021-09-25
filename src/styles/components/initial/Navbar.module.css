@@ -31,25 +31,24 @@
     justify-content: flex-start;
     align-items: center;
 
-    font-size: 1.2rem;
-    color: rgba(0, 101, 255, 0.8);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.09375rem;
+    color: #0065ff;
+    font-family: 'Charlie Text',sans-serif;
     font-weight: 400;
-    padding: 15px;
-
-    border-radius: 12px;
+    margin-left: 5px;
+    border-radius: 3px;
 }
 
 .Navbar a:last-child{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    font-size: 1.2rem;
+    background-color: #0065ff;
+    font-size: 1.09375rem;
     color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 400;
-    padding: 15px;
+    font-family: 'Charlie Text',sans-serif;
+    font-weight: 500;
+    padding: 9px;
 
-    border-radius: 12px;
+    border-radius: 4px;
 }

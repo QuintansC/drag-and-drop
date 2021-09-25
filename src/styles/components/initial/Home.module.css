@@ -5,8 +5,13 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 300%;
     background-color: #eae6ff;
+    font-family: 'Charlie Display',sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #091e42
 }
 
 .Image{
@@ -18,7 +23,7 @@
     width: 100%;
     height: 100%;
     background: url(./../../../images/hero.png) no-repeat;
-    background-position: 60rem 11rem; /* Center the image */
+    background-position: 53rem 11rem; /* Center the image */
     background-size: 350px, 350px ;
     display: flex;
     flex-direction: column;
@@ -27,36 +32,45 @@
 .Image h2{
     position: relative;
     margin-top: 12%;
-    font-size: 2.7rem;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 500;
     color: black;
-    width: 40%;
-    left: 10%;
+    width: 49%;
+    left: 8%;
     margin-bottom: 0;
 }
 
 .Image p{
     position: relative;
-    font-size: 1.3rem;
     color: black;
-    width: 40%;
-    left: 10%;
+    width: 49%;
+    left: 8%;
     margin-top: 1%;
 }
 
 .cadUni{
     display: flex;
     position: relative;
-    left: 10%;
-    justify-content: space-around;
-    width: 40%;
+    top: 2%;
+    left: 8%;
+    justify-content: space-between;
+    width: 49%;
+}
+
+.cadUni a{
+    width: 30%;
+    text-align: center;
+    border-radius: 6px;
 }
 
 .cadUni input[type=text]{
     width: 60%;
     height: 2.5rem;
-    border-style: none;
+    border: 1px solid #5252526b;
     border-radius: 8px;
 }
+
 .cadUni input[type=text]::-webkit-input-placeholder{
     position: relative;
     top:5%;
@@ -69,11 +83,4 @@
     background-color: rgba(0, 101, 255, 0.8);
 }
 
-.cadUni a {
-    font-size: 1rem !important;
-    font-weight:300;
-    height: 0.9rem;
-    width: 30%;
-    color: white;
-}
 

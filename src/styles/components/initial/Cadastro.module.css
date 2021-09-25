@@ -25,6 +25,18 @@
     bottom: 30px;
 }
 
+.cadastroContent .form p{
+    position: absolute;
+    font-size: 12px;
+    top: 40%;
+    left: 35px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+    text-align: center;
+ }
+
 
 .cadastroContent .form input{
     position: relative;
@@ -74,17 +86,7 @@ h3 {
     top: 7%;
 }
 
-p{
-   position: absolute;
-   font-size: 12px;
-   top: 40%;
-   left: 35px;
-   width: 80%;
-   display: flex;
-   align-items: center;
-   justify-content: center  ;
-   text-align: center;
-}
+
 
 .form div{
     position: absolute;

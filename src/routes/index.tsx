@@ -5,7 +5,7 @@ import Cadastro from '../components/initial/Cadastro';
 import HomePrincipal from '../pages/homePrincipal';
 import Dashboard from '../components/dashboard/Index';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { DropzoneProvider } from '../contexts/DropzoneContext';
 
 export default class Routes extends React.Component{
@@ -14,7 +14,10 @@ export default class Routes extends React.Component{
             <DropzoneProvider>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/">
+                            <Redirect to="/home" />
+                        </Route>
+                        <Route exact path="/home" component={Home}/>
                         <Route exact path="/login" component={Login}/>
                         <Route exact path="/cadastro" component={Cadastro}/>
                         <Route path="/:username/boards" component={HomePrincipal}/>

@@ -1,11 +1,10 @@
 import styles from '../../styles/components/initial/Navbar.module.css';
-import Trello from '../../images/Trello-Logo.svg';
 import { Link } from 'react-router-dom';
 
 export function Navbar(){
   return(
     <nav className={styles.Navbar}>
-      <img src={Trello} alt="Logo" className={styles.logo} />
+      <img src="/Trello-Logo.svg" alt="Logo" className={styles.logo} />
         <div className={styles.navs}>
           
         </div>
