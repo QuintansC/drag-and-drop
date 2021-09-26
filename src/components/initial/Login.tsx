@@ -6,13 +6,12 @@ import Microsoft from './../../images/Microsoft.svg';
 import Apple from './../../images/Apple.svg';
 
 import useLogin  from '../../hooks/login'
-
 import { LoginType } from '../../types';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-    const {signUp, message} = useLogin();
+    const {signIn, message} = useLogin();
 
     function enviaForm(){
         var queris = document.querySelectorAll('input');
@@ -48,7 +47,7 @@ export default  function Login(props: LoginType){
                                 marginBottom: '-20%', 
                                 backgroundColor: 'green' 
                             }} 
-                            onClick={()=>signUp(login, senha)}
+                            onClick={()=>signIn(login, senha)}
                         >Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
                         <button name="google" className={styles.submitButto} type="button" ><img src={Google} alt=""/> Conectar com o Google</button>

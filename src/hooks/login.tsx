@@ -1,6 +1,5 @@
 import { useState, useContext } from 'react';
 import api from '../services/api';
-
 import { useHistory } from 'react-router-dom';
 import { DropzoneContext } from '../contexts/DropzoneContext';
 
@@ -9,7 +8,7 @@ const useLogin = ()=>{
     const [message, setMessage] = useState('');
     const { setToken } = useContext(DropzoneContext);
     
-    async function signUp (login:string , senha:string){
+    async function signIn (login:string , senha:string){
         try{
             await api.post('/login',{
                 user: login.toLocaleLowerCase(),
@@ -31,7 +30,7 @@ const useLogin = ()=>{
         
 
     return {
-        signUp, message
+        signIn, message
     }
 }
 
