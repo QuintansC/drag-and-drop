@@ -80,4 +80,7 @@
 
 .loginContent .textConectado{
     position: relative;
+    transform: translate(-12%, 15%);
+    left: 50%;
+    font-size: 16px;
 }
