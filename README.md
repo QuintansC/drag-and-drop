@@ -6,7 +6,7 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 	🚧  React Kanban 🚀 Em construção...  🚧
 </h4>
 
-### Pausado
+### Em desenvolvimento
 - [x] Dashboard
 ### Features
 
@@ -72,5 +72,4 @@ $ yarn start
 ## Detalhes da aplicação  
 ## `Qualquer ajuda será bem vinda!` 
 <br>
-Ainda em desenvolvimento, o objetivo é a organização de maneira simples onde você pode se divertir fazendo suas obrigações e ouvindo uma musica sendo extremamente produtivo.
-O que você acha que está faltando? alguma dica entre contato.
+Ainda em desenvolvimento, o projeto tem como objetivo apenas estudo na Linguaguem de Programação Javascript e no Framework ReactJS
