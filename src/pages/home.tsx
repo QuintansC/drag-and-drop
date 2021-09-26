@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import styles from '../styles/components/initial/Home.module.css';
 import { Navbar } from '../components/initial/NavBar';
 import { useEffect } from 'react';
+import styles from '../styles/pages/Home.module.css';
 export default function Home(){
     useEffect(()=>{
         document.title = 'Trello';

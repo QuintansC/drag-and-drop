@@ -1,9 +1,9 @@
 import React from 'react';
-import Home from '../pages';
+import Home from '../pages/home';
 import Login from '../components/initial/Login';
 import Cadastro from '../components/initial/Cadastro';
-import HomePrincipal from '../pages/homePrincipal';
-import Dashboard from '../components/dashboard/Index';
+import HomeLogado from '../pages/homeLogado';
+import KanBan from '../pages/homeKanban';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { DropzoneProvider } from '../contexts/DropzoneContext';
@@ -20,8 +20,8 @@ export default class Routes extends React.Component{
                         <Route exact path="/home" component={Home}/>
                         <Route exact path="/login" component={Login}/>
                         <Route exact path="/cadastro" component={Cadastro}/>
-                        <Route path="/:username/boards" component={HomePrincipal}/>
-                        <Route exact path="/dashboard" component={Dashboard}/>
+                        <Route path="/:username/boards" component={HomeLogado}/>
+                        <Route exact path="/kanBan" component={KanBan}/>
                     </Switch>
                 </BrowserRouter>
             </DropzoneProvider>

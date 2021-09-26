@@ -1,9 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
-import { Board } from '../components/dashboard/Board';
-import { Cards } from '../components/dashboard/Cards';
 import { NavComponents } from '../components/dashboard/NavComponents';
-import styles from '../styles/pages/homePrincipal.module.css';
+import { NavHorizontal } from '../components/dashboard/NavHorizontal';
 import { DropzoneContext } from '../contexts/DropzoneContext';
+import styles from '../styles/pages/HomeLogado.module.css';
 
 function HomePricipal(props: any){ 
   const { getToken } = useContext(DropzoneContext);
@@ -34,22 +33,9 @@ function HomePricipal(props: any){
   var token = getToken()
   if(token !== 'undefined'){
     return (
-      <div className={`${styles.HomeContent} cont`}>
+      <div className={`${styles.HomeContent}`}>
         <NavComponents/>
-        <div className="boards">
-
-          <Board name="To Do">
-            <Cards hora={{hours, minutes, seconds}} color="red" content="Terminar a aplicação"/>
-          </Board> 
-
-          <Board name="In progress">
-            <Cards hora={{hours, minutes, seconds}} color="blue" content="Programando a aplicação"/>
-          </Board> 
-
-          <Board name="Done">
-            <Cards hora={{hours, minutes, seconds}} color="green" content="Aplicação final"/>
-          </Board>
-        </div>
+		    <NavHorizontal/>
       </div>
     );
   }else{

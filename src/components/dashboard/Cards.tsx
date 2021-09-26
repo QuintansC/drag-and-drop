@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { DropzoneContext } from '../../contexts/DropzoneContext';
-import '../../styles/components/Card.css';
+import styles from '../../styles/components/dashboard/Card.module.css';
 
 interface CardProps{
     color: string,
@@ -61,7 +61,7 @@ export function Cards (props: CardProps){
   function dragstart({target} :any){
     //Começa o drag
     enableDropzone();
-    target.classList.add('isDragging');
+    target.classList.add(styles.isDragging);
   }
   
   function drag(){}
@@ -69,20 +69,20 @@ export function Cards (props: CardProps){
   function dragend({target}: any){
     //Termina o drag
     disableDropzone();
-    target.classList.remove('isDragging');
+    target.classList.remove(styles.isDragging);
   }
   
 
   return(
     <div 
-      className="card" 
+      className={styles.card} 
       draggable="true"
       onDragStart={dragstart}
       onDrag={drag}
       onDragEnd={dragend}      
     >
-      <div className={`${'status'} ${props.color}`} draggable={false}></div>
-      <div className="content">{props.content}<br></br>Hora: {isHours?hours:hou}:{isMinute?minute:min}:{isSeconds?seconds:sec}</div>
+      <div className={`${styles.status} ${props.color}`} draggable={false}></div>
+      <div className={styles.content}>{props.content}<br></br>Hora: {isHours?hours:hou}:{isMinute?minute:min}:{isSeconds?seconds:sec}</div>
     </div>
   );
 }

@@ -1,14 +1,12 @@
 html{
-  font-family: 'Nunito';
-  margin: 0; 
-  padding: 0;
+	font-family: 'Nunito';
+	margin: 0; 
+	padding: 0;
 }
 
 body{
-  background-color: #130f0d;
-  color: white;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
 }

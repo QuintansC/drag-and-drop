@@ -1,3 +1,8 @@
+.boards{
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+}
 .NavContent button, a{
     display: flex;
     justify-content: flex-start;

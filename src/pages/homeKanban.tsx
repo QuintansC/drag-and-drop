@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from 'react';
-import { Board } from './Board';
-import { Cards } from './Cards';
-import { NavComponents } from './NavComponents';
-import '../../styles/App.css';
-import { DropzoneContext } from '../../contexts/DropzoneContext';
+import { Board } from '../components/dashboard/Board';
+import { Cards } from '../components/dashboard/Cards';
+import { NavComponents } from '../components/dashboard/NavComponents';
+import { DropzoneContext } from '../contexts/DropzoneContext';
+import styles from '../styles/pages/HomeKanban.module.css';
 
 function Dashboard(props: any){ 
   const { getToken } = useContext(DropzoneContext);
@@ -31,9 +31,9 @@ function Dashboard(props: any){
   var token = getToken()
   if(token !== 'undefined'){
     return (
-      <div className="cont">
+      <div className={styles.cont}>
         <NavComponents/>
-        <div className="boards">
+        <div className={styles.boards}>
 
           <Board name="To Do">
             <Cards hora={{hours, minutes, seconds}} color="red" content="Terminar a aplicação"/>

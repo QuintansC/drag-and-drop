@@ -26,3 +26,10 @@
 .over{
     background-color: #4cd13711;
 }
+
+.boards{
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+}
+  

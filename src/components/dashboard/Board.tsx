@@ -1,5 +1,5 @@
-import { ReactNode, useContext, useState } from 'react';
-import '../../styles/components/Board.css'
+import { ReactNode, useContext } from 'react';
+import styles from '../../styles/components/dashboard/Board.module.css'
 
 import { DropzoneContext } from '../../contexts/DropzoneContext';
 
@@ -17,13 +17,13 @@ export function Board({name, children}: BoardProps){
   function dragOver({target}: any){
     //Quando estiver em cima da zona de drop
     var test = target.children;
-    var cards = document.getElementsByClassName('card')
-    target.classList.add('over');
+    var cards = document.getElementsByClassName(styles.card)
+    target.classList.add(styles.over);
     
     if(test[0] === cards[0] || test[0] === cards[1] || test[0] === cards[2] || test.length < 1){
       try {
-        const cardDragging = document.querySelector('.isDragging');
-        target.classList.add('over');
+        const cardDragging = document.querySelector(styles.isDragging);
+        target.classList.add(styles.over);
         target.appendChild(cardDragging);
       } catch (error) {
         //message error
@@ -33,19 +33,19 @@ export function Board({name, children}: BoardProps){
   
   function dragLeave({target}: any){
     //Quando sair do drag
-    target.classList.remove('over');
+    target.classList.remove(styles.over);
   }
 
   function drop({target}: any){
     //Quando for dropano na area
-    target.classList.remove('over');
+    target.classList.remove(styles.over);
   }
 
   return(
-    <div className="board">
+    <div className={styles.board}>
       <h3>{name}</h3>
       <div 
-        className={`${'dropzone'} ${dropzoneEnabled?'highlight':null} `}
+        className={`${styles.dropzone} ${dropzoneEnabled?styles.highlight:null} `}
         onDragEnter={dragEnter}
         onDragOver={dragOver}
         onDragLeave={dragLeave}
