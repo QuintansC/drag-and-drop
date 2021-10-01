@@ -1,0 +1,28 @@
+.boards{
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+}
+.NavContent button, a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 0.84rem;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font: none;
+    text-decoration: none;
+    padding: 0 15px;
+
+    border-radius: 12px;
+}
+
+.NavContent button{
+    background-color: #025180;
+}
+
+.NavContent button{
+    background-color: transparent;
+    border: 0;
+}
