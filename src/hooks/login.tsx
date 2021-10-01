@@ -25,8 +25,8 @@ const useLogin = ()=>{
                 swal("Oops!", err.response.data.message, "error")
             })
         }
-        catch(e: any){
-            swal("Oops!", e, "error")
+        catch(error: any){
+            swal("Oops!", error, "error")
             setMessage('mensagem de erros');
         }
     }    
