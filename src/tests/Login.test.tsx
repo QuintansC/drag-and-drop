@@ -1,8 +1,11 @@
 import LoginComponent from '../components/initial/Login'
 import { render, screen, userEvent, fireEvent } from './index'
 
-const userExpect = "admin" 
-const passwordExpect = "123456" 
+import { act, renderHook } from '@testing-library/react-hooks'
+import useLogin from '../hooks/login';
+
+const userExpect = "valid_user" 
+const passwordExpect = "valid_password" 
 
 const makeSutLogin = ()=>{
     const Login = jest.fn().mockImplementation(LoginComponent)
@@ -44,18 +47,22 @@ describe('Componente Login', ()=>{
     test('Deve verificar se as informações de login chegaram ao hook', async ()=>{
         const { Login } = makeSutLogin(); 
         render(<Login />)  
+        const { result } = renderHook(useLogin)
         const {user, password} = callComponents()
 
-        fireEvent.change(user, {target: {value: 'Quintans'}})
-        fireEvent.change(password, {target: {value: '123456'}})
+        fireEvent.change(user, {target: {value: 'valid_user'}})
+        fireEvent.change(password, {target: {value: 'valid_password'}})
 
-        expect(user).toHaveValue('Quintans');
-        expect(password).toHaveValue('123456');
+        expect(user).toHaveValue('valid_user');
+        expect(password).toHaveValue('valid_password');
 
-        const button = screen.getByText('Fazer Login')
+        const button = screen.getByTitle('enviar')
         userEvent.click(button)
-    
-        const response = await screen.findByText('mensagem de erros')
-        expect(response).toBeInTheDocument()
+
+        act(()=>{
+            result.current.signIn(user.innerText, password.innerText)
+        })
+
+        expect(result.current.message).toEqual('mensagem de erros')
     })
 })

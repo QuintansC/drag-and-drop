@@ -39,7 +39,7 @@ export default  function Login(props: LoginType){
                     <input title="password" type="password" onChange={enviaForm}></input>
                     <div>
                         <button 
-                            name="enviar" 
+                            title="enviar" 
                             className={styles.submitButto} 
                             type="button" 
                             style={{
