@@ -11,7 +11,7 @@ const useLogin = ()=>{
     
     async function signIn (login:string , senha:string){
         try{
-            var result = await api.post('/login',{
+            await api.post('/login',{
                 user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(function(res){    
