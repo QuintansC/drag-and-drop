@@ -25,7 +25,7 @@ export default  function Login(props: LoginType){
     return(
         <div className={styles.loginContent}>
             <img alt="logo" src={images.Logo}/>
-            <p>{message}</p>
+            <p hidden>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
                     <h2>Crie sua conta</h2>

@@ -22,11 +22,11 @@ const useLogin = ()=>{
             }).catch(function(err){
                 console.log(err.response.data)
                 setMessage(err.response.data.message)
-                swal("Oops!", err.response.data.message, "error")
+                swal("Algo deu errado 😢!", err.response.data.message, "error")
             })
         }
         catch(error: any){
-            swal("Oops!", error, "error")
+            swal("Algo deu errado 😢!", error, "error")
             setMessage('mensagem de erros');
         }
     }    

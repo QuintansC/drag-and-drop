@@ -14,7 +14,11 @@ body{
 .swal-icon {
     width: 40px;
     height: 40px;
-	margin: 0px 25px;
+	margin: 0px 30px;
+}
+.swal-title {
+	margin-top: -10%;
+
 }
 
 .swal-icon:first-child {
