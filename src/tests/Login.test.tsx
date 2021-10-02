@@ -1,7 +1,5 @@
 import LoginComponent from '../components/initial/Login'
-import { render, screen, userEvent, fireEvent } from './index'
-
-import { act, renderHook } from '@testing-library/react-hooks'
+import { render, screen, userEvent, fireEvent, act, renderHook } from './index'
 import useLogin from '../hooks/login';
 
 const userExpect = "valid_user" 
