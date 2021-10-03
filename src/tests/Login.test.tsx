@@ -58,7 +58,7 @@ describe('Componente Login', ()=>{
         userEvent.click(button)
 
         act(()=>{
-            result.current.signIn(user.innerText, password.innerText)
+            result.current.signIn(user.innerText, password.innerText) 
         })
 
         expect(result.current.message).toEqual('mensagem de erros')
