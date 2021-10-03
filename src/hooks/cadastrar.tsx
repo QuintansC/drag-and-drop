@@ -1,8 +1,10 @@
 import api from '../services/api';
+import { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 
 const useCadastrar = ()=>{
     const history = useHistory();
+    const [message, setMessage] = useState('');
 
     async function signUp (email:string, login: string, senha:string){
         try{
@@ -14,19 +16,19 @@ const useCadastrar = ()=>{
                 if(res.status===201){
                     history.push("/login");
                 }else if(res.status===406){
-                    console.log(res.data.message);
+                    setMessage(res.data.message);
                 }else{
-                    console.log(res.data.message);
+                    setMessage(res.data.message);
                 }
             });
         }
-        catch{
-            //error message
+        catch(error: any){
+            setMessage('mensagem de error')
         }    
     }   
 
     return {
-        signUp
+        signUp, message
     }
 }
 

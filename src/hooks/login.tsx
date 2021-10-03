@@ -20,14 +20,15 @@ const useLogin = ()=>{
                 setMessage(res.data.message)   
                 history.push(`${login}/boards`)            
             }).catch(function(err){
+                const message: string = err.response.data.message;
                 console.log(err.response.data)
-                setMessage(err.response.data.message)
-                swal("Algo deu errado 😢!", err.response.data.message, "error")
+                setMessage(message)
+                swal("Algo deu errado 😢!", message, "error")
             })
         }
         catch(error: any){
-            swal("Algo deu errado 😢!", error, "error")
             setMessage('mensagem de erros');
+            swal("Algo deu errado 😢!", error.message, "error")
         }
     }    
         
