@@ -6,3 +6,11 @@
     height: 100vh;
     background-color: gray;
 }
+
+.navHorizontal ul{
+    width: 66%;
+}
+
+body{
+    overflow-x: hidden;
+}
