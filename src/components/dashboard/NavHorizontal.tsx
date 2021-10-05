@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../styles/components/dashboard/NavHorizontal.module.css';
+import styles from '../../styles/components/dashboard/NavHorizontal.module.scss';
 
 export function NavHorizontal(){ 
 
