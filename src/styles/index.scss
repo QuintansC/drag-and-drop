@@ -1,0 +1,34 @@
+html{
+	font-family: 'Nunito';
+	margin: 0; 
+	padding: 0;
+	body{
+		margin: 0;
+		padding: 0;
+		left: 0;
+		top: 0;
+	}
+}
+.swal-title {
+	margin-top: -10%;
+
+}
+
+.swal-icon{
+	width: 40px;
+    height: 40px;
+	margin: 0px 30px;
+	&:first-child {
+    	margin-top: 20px;
+	}
+	&--error__line {
+		width: 23px;
+		top: 19px;
+		&--left {
+			left: 8px;
+		}
+		&--right {
+			right: 9px;
+		}
+	}
+}
