@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../styles/components/initial/Login.module.css';
+import styles from '../../styles/components/initial/Login.module.scss';
 import images  from './../../images/index';
 import useLogin  from '../../hooks/login'
 import { LoginType } from '../../types';
@@ -24,7 +24,7 @@ export default  function Login(props: LoginType){
 
     return(
         <div className={styles.loginContent}>
-            <img alt="logo" src={images.Logo}/>
+            <img className={styles.logo} alt="logo" src={images.Logo}/>
             <p hidden>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
