@@ -22,15 +22,19 @@ export function NavHorizontal(){
   return(
     <nav className={styles.navHorizontal}>
         <ul>
-            <li><Link to="/">Quadros</Link></li>
-            <li><Link to="">Modelos</Link></li>
-            <li><Link to="">Inicio</Link></li>
+          <li><Link to="/">Quadros</Link></li>
+          <li><Link to="">Modelos</Link></li>
+          <li><Link to="">Inicio</Link></li>
         </ul>
         <h3>Area de trabalho</h3>
         <ul className={styles.project}>
-            <button onClick={click}> Projeto Name </button>
-            <li> teste</li>
-            <li> testes</li>
+          <button onClick={click}> Projeto Name </button>
+          <li>Introdução</li>
+          <li>Quadros</li>
+          <li>Destaques</li>
+          <li>Tabela da Area de Trabalho</li>
+          <li>Membros</li>
+          <li>Configurações</li>
         </ul>
     </nav>
   )
