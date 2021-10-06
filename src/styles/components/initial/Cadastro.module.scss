@@ -1,0 +1,87 @@
+.cadastroContent{
+    position: absolute;
+    padding-left: 0px;
+    width: 100.2%;
+    height: 160%;
+    background: url(./../../../images/Trello.png) 0% 50% no-repeat fixed;
+    background-size: 100% 100%;
+    top: 0vh;
+    left: -3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form{
+        position: relative;
+        height: 100%;
+        width: 25%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 10px black;
+        color: black;
+        display: flex;
+        padding-top: 6.5%;
+        justify-content: center;
+        bottom: 30px;
+        p{
+            position: absolute;
+            font-size: 12px;
+            top: 40%;
+            left: 35px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center  ;
+            text-align: center;
+        }
+        input{
+            position: relative;
+            top:5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 8%;
+            width: 80%;
+        }
+        h2{
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            color: black;
+            font-size: 16px;
+        } 
+        div{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-42%, -0%);
+        }
+    }
+    h3 {
+        position: relative;
+        left: 40%;
+        color: black;
+    }
+    img{
+        position: relative;
+        display: flex;
+        height: 80%;
+        width: 30%;
+    }
+    .submitButtons{
+        position: relative;
+        width: 85%;
+        background-color: white;
+        border-color:  transparent;
+        box-shadow: 0 0 1.5px black;
+        margin-top: 8px !important;
+        height: 40px;
+        line-height: 5px;
+        img{
+            position: absolute;
+            top: 7%;
+        }
+    }
+    .textConectado{
+        margin: 19px auto 0;
+    }
+}

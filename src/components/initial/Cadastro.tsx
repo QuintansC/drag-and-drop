@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../styles/components/initial/Cadastro.module.css';
+import styles from '../../styles/components/initial/Cadastro.module.scss';
 import svg from './../../images/index';
 import { CadastroType } from '../../types';
 import useCadastrar from '../../hooks/cadastrar';
