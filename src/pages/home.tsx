@@ -1,11 +1,25 @@
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/initial/NavBar';
-import { useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from '../styles/pages/Home.module.css';
+import { DropzoneContext } from '../contexts/DropzoneContext';
+import { Redirect } from 'react-router-dom'
 export default function Home(){
+    const { getToken } = useContext(DropzoneContext)
+    const [Token, setToken]= useState('')
     useEffect(()=>{
         document.title = 'Trello';
     })
+    useEffect(()=>{
+        let token = getToken();
+        if(token !== null){
+            setToken(token);    
+        }else{
+            setToken('undefined')
+        }
+    }, [])
+
+    if(Token === 'undefined'){
     return(
         <div className={styles.HomeContent}>
             <Navbar></Navbar>
@@ -17,5 +31,14 @@ export default function Home(){
                 </div>
             </div>
         </div>
-    );
+    );}
+    else{
+        let user = localStorage.getItem('usernameTrello');
+        console.log(user)
+        if(user === null){}
+        else{
+            window.location.href = "/"+user+"/boards";
+        }     
+        return <div></div>
+    }
 }

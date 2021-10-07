@@ -7,7 +7,7 @@ import { LoginType } from '../../types';
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-    const {signIn, message} = useLogin(); 
+    const {signIn, message, loading} = useLogin(); 
 
     function enviaForm(){
         var queris = document.querySelectorAll('input');
@@ -43,7 +43,7 @@ export default  function Login(props: LoginType){
                                 marginBottom: '-20%', 
                                 backgroundColor: 'green' 
                             }} 
-                            onClick={()=>signIn(login, senha)}
+                            onClick={()=>loading?null:signIn(login, senha)}
                         >Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
                         <button name="google" className={styles.submitButto} type="button" ><img src={images.Google} alt=""/> Conectar com o Google</button>

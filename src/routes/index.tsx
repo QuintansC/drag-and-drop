@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Home from '../pages/home';
 import Login from '../components/initial/Login';
 import Cadastro from '../components/initial/Cadastro';
@@ -10,6 +10,7 @@ import { DropzoneProvider } from '../contexts/DropzoneContext';
 
 export default class Routes extends React.Component{
     render(){
+        let username = localStorage.getItem('usernameTrello')
         return(
             <DropzoneProvider>
                 <BrowserRouter>
@@ -20,6 +21,9 @@ export default class Routes extends React.Component{
                         <Route exact path="/home" component={Home}/>
                         <Route exact path="/login" component={Login}/>
                         <Route exact path="/cadastro" component={Cadastro}/>
+                        <Route exact path={`/${username}/${username}/boards`}>
+                            <Redirect to={`/${username}/boards`}/>
+                        </Route>
                         <Route path="/:username/boards" component={HomeLogado}/>
                         <Route exact path="/kanBan" component={KanBan}/>
                     </Switch>
