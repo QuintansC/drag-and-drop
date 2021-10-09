@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/initial/NavBar';
 import { useContext, useEffect, useState } from 'react';
-import styles from '../styles/pages/Home.module.css';
+import styles from '../styles/pages/Home.module.scss';
 import { DropzoneContext } from '../contexts/DropzoneContext';
 import { Redirect } from 'react-router-dom'
 export default function Home(){
