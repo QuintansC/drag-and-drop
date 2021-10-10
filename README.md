@@ -13,6 +13,7 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 - [x] Home
 - [x] Cadastro
 - [x] Login
+- [ ] Recriar Drag and drop
 - [ ] Dashboard
 - [ ] Actions
 - [ ] Api em Node
@@ -72,4 +73,5 @@ $ yarn start
 ## Detalhes da aplicação  
 ## `Qualquer ajuda será bem vinda!` 
 <br>
-Ainda em desenvolvimento, o projeto tem como objetivo apenas estudo na Linguaguem de Programação Javascript e no Framework ReactJS
+Ainda em desenvolvimento, o projeto tem como objetivo apenas estudo na Linguaguem de Programação Javascript e no Framework ReactJS <br>
+Necessario Recriar Drag and drop - https://www.youtube.com/watch?v=awRtgpRsdTQ&ab_channel=Rocketseat
