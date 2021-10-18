@@ -1,5 +1,4 @@
 const validate = ()=>{
-    
     function validateEmail (email:string): boolean{
         if(email !== ''){
             var regular = /\S+@\S+\.\S+/;

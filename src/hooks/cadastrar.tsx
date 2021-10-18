@@ -26,7 +26,6 @@ const useCadastrar = ()=>{
             setMessage('mensagem de error')
         }    
     }   
-
     return {
         signUp, message
     }

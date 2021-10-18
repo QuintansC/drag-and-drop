@@ -36,8 +36,6 @@ const useLogin = ()=>{
             swal("Algo deu errado 😢!", error.message, "error")
         }
     }    
-        
-
     return {
         signIn, message, loading
     }
