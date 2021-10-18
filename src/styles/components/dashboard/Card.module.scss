@@ -11,32 +11,25 @@
 .card, .dropzone{
     transition: 0.4s;
 }
-
 .status{
     width: 30px;
     height: 8px;
     margin-bottom: 16px;
     border-radius: 8px;
+    &.green{
+        background-color: #23d2ac;
+    }
+    &.blue{
+        background-color: #33adff;
+    }
+    &.red{
+        background-color: red;
+    }
 }
-
-.status.green{
-    background-color: #23d2ac;
-}
-
-.status.blue{
-    background-color: #33adff;
-}
-
-.status.red{
-    background-color: red;
-}
-
 .isDragging{
     cursor: move;
     opacity: 0.5;
 }
-
-
 .content{
     max-width: auto;
 }

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/dashboard/ContentMain.module.css';
+import styles from '../../styles/components/dashboard/ContentMain.module.scss';
 
 export function ContentMain(){
   return(
