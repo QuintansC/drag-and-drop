@@ -3,7 +3,7 @@ import { Board } from '../components/dashboard/Board';
 import { Cards } from '../components/dashboard/Cards';
 import { NavComponents } from '../components/dashboard/NavComponents';
 import { DropzoneContext } from '../contexts/DropzoneContext';
-import styles from '../styles/pages/HomeKanban.module.css';
+import styles from '../styles/pages/HomeKanban.module.scss';
 
 function Dashboard(props: any){ 
   const { getToken } = useContext(DropzoneContext);

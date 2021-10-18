@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react';
 import { NavComponents } from '../components/dashboard/NavComponents';
 import { NavHorizontal } from '../components/dashboard/NavHorizontal';
 import { DropzoneContext } from '../contexts/DropzoneContext';
-import styles from '../styles/pages/HomeLogado.module.css';
+import styles from '../styles/pages/HomeLogado.module.scss';
 import { ContentMain } from '../components/dashboard/ContentMain';
 import { HomeLogadoType } from '../types/index'
 
