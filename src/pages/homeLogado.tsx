@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
 import { NavComponents } from '../components/dashboard/NavComponents';
-import { NavHorizontal } from '../components/dashboard/NavVertical';
+import { NavVertical } from '../components/dashboard/NavVertical';
 import { DropzoneContext } from '../contexts/DropzoneContext';
 import styles from '../styles/pages/HomeLogado.module.scss';
 import { ContentMain } from '../components/dashboard/ContentMain';
@@ -17,7 +17,7 @@ function HomePricipal(props: any){
     return (
       <div className={`${styles.HomeContent}`}>
         <NavComponents/>
-		    <NavHorizontal/>
+		    <NavVertical/>
         <ContentMain/>
       </div>
     );

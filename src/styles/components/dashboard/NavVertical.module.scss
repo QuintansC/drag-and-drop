@@ -1,24 +1,30 @@
 body{
     overflow-x: hidden;
 }
-.navHorizontal{
+.navVertical{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25%;
     height: 100vh;
-    background-color: gray;
+    background-color: rgb(155, 155, 155);
     ul{
         width: 66%;
         list-style-type: none;
         button{
             background-color: transparent;
             border: 0;
+            color: white;
+        }
+        li{line-height: 35px;}
+        li:hover{
+            background-color: rgba(0, 0, 0, 0.205);
         }
     }
 
     .project li{
         margin-left: 10%;
-        line-height: 35px;
+        
     }
+    
 } 

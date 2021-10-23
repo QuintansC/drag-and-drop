@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../styles/components/dashboard/NavHorizontal.module.scss';
+import styles from '../../styles/components/dashboard/NavVertical.module.scss';
 
-export function NavHorizontal(){ 
+export function NavVertical(){ 
 
   const [ishidden, setIsHidden] = useState(false)
 
@@ -20,7 +20,7 @@ export function NavHorizontal(){
   }
 
   return(
-    <nav className={styles.navHorizontal}>
+    <nav className={styles.navVertical}>
         <ul>
           <li><Link to="/gustavoquintans/boards">Quadros</Link></li>
           <li><Link to="/templates">Modelos</Link></li>
