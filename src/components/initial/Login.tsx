@@ -1,8 +1,10 @@
-import { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import { useEffect, useState } from 'react';
 import styles from '../../styles/components/initial/Login.module.scss';
 import images  from './../../images/index';
 import useLogin  from '../../hooks/login'
 import { LoginType } from '../../types';
+import { on } from 'stream';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
@@ -30,9 +32,9 @@ export default  function Login(props: LoginType){
                 <form method="POST">
                     <h2>Crie sua conta</h2>
                     <span>Usuário</span>
-                    <input data-testid="user" type="text" onChange={enviaForm}></input>
+                    <input data-testid="user" type="text" onChange={enviaForm}  onKeyPress={(e)=>{e.which === 13 || e.keyCode === 13? signIn(login, senha): null}}></input>
                     <span>Senha</span>
-                    <input title="password" type="password" onChange={enviaForm}></input>
+                    <input title="password" type="password" onChange={enviaForm}  onKeyPress={(e)=>{e.which === 13 || e.keyCode === 13? signIn(login, senha) : null}}></input>
                     <div>
                         <button 
                             title="enviar" 

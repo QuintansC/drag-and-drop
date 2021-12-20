@@ -30,7 +30,7 @@ export default class Routes extends React.Component{
                         <Route exact path={`/${username}/${username}/boards`}>
                             <Redirect to={`/${username}/boards`}/>
                         </Route>
-                        <Route path="/:username/boards" component={HomeLogado}/>
+                        <Route path={`/${username}/boards`} component={HomeLogado}/>
                         <Route exact path="/kanBan" component={KanBan}/>             
                        
                     </Switch>
