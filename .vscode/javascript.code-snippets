@@ -1,0 +1,20 @@
+{
+	"Js creation": {
+		"scope": "javascript,typescript, typescriptreact",
+		"prefix": "crc",
+		"body": [
+			"import styles from '../../styles/components/dashboard/ContentMain.module.scss'",
+			"import { NavComponents } from './NavComponents';",
+			"import { NavVertical } from './NavVertical';",
+			
+			"export function ${TM_FILENAME_BASE}(){",
+			"	return(",
+			"		<div className={`${styles.HomeContent}`}>",
+			"	",
+			"		</div>",
+			"	 )",
+			"}",
+		],
+		"description": "Log output to console"
+	}
+}

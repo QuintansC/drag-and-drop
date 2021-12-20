@@ -4,7 +4,7 @@ import { time } from 'console';
 
 export function NavComponents(props: any){
   function sair(){
-    localStorage.clear();
+    sessionStorage.clear();
     window.location.href = '/home';
   }
   return(

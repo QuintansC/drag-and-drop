@@ -30,12 +30,12 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
     function setToken(tokens: string, name: string){
         //Setar nos cookies
         setTokens(tokens);
-        localStorage.setItem('tokenTrello', tokens)
-        localStorage.setItem('usernameTrello', name)
+        sessionStorage.setItem('tokenTrello', tokens)
+        sessionStorage.setItem('usernameTrello', name)
     }
 
     function getToken(){
-        var token = localStorage.getItem('tokenTrello');
+        var token = sessionStorage.getItem('tokenTrello');
         setTokens(token?token:'undefined');
         return token?token:'undefined';
     }

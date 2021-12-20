@@ -7,10 +7,16 @@ import KanBan from '../pages/homeKanban';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { DropzoneProvider } from '../contexts/DropzoneContext';
+import {  } from '../components/dashboard/NavComponents';
+import GettingStarted from '../pages/cloneuser3/getting-started';
+import Highlights from '../pages/cloneuser3/highlights';
+import Tables from '../pages/cloneuser3/tables';
+import Members from '../pages/cloneuser3/members';
+import Account from '../pages/cloneuser3/account';
 
 export default class Routes extends React.Component{
     render(){
-        let username = localStorage.getItem('usernameTrello')
+        let username = sessionStorage.getItem('usernameTrello')
         return(
             <DropzoneProvider>
                 <BrowserRouter>
@@ -25,7 +31,16 @@ export default class Routes extends React.Component{
                             <Redirect to={`/${username}/boards`}/>
                         </Route>
                         <Route path="/:username/boards" component={HomeLogado}/>
-                        <Route exact path="/kanBan" component={KanBan}/>
+                        <Route exact path="/kanBan" component={KanBan}/>             
+                       
+                    </Switch>
+
+                    <Switch>
+                        <Route path="/cloneuser3/getting-started" component={GettingStarted}/>
+                        <Route exact path="/cloneuser3/highlights" component={Highlights}/>
+                        <Route exact path="/cloneuser3/tables" component={Tables}/>
+                        <Route exact path="/cloneuser3/members" component={Members}/>     
+                        <Route exact path="/cloneuser3/account" component={Account}/>               
                     </Switch>
                 </BrowserRouter>
             </DropzoneProvider>

@@ -33,7 +33,7 @@ export default function Home(){
         </div>
     );}
     else{
-        let user = localStorage.getItem('usernameTrello');
+        let user = sessionStorage.getItem('usernameTrello');
         console.log(user)
         if(user === null){}
         else{
