@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Navbar } from '../components/initial/NavBar';
 import { useContext, useEffect, useState } from 'react';
 import styles from '../styles/pages/Home.module.scss';
@@ -9,7 +9,11 @@ export default function Home(){
     const [Token, setToken]= useState('')
     useEffect(()=>{
         document.title = 'Trello';
+        if(window.location.pathname === '/'+sessionStorage.getItem('usernameTrello')+'/boards'){
+            window.location.href = '/'+sessionStorage.getItem('usernameTrello')+'/boards'
+        }
     })
+
     useEffect(()=>{
         let token = getToken();
         if(token !== null){
@@ -35,10 +39,11 @@ export default function Home(){
     else{
         let user = sessionStorage.getItem('usernameTrello');
         console.log(user)
-        if(user === null){}
+        if(user === null){
+            return <Redirect to="/home" />
+        }
         else{
-            window.location.href = "/"+user+"/boards";
+            return <Redirect to={`/${user}/boards`} />  
         }     
-        return <div>{window.location.href = "/"+user+"/boards"}</div>
     }
 }

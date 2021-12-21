@@ -13,6 +13,7 @@ import Highlights from '../pages/cloneuser3/highlights';
 import Tables from '../pages/cloneuser3/tables';
 import Members from '../pages/cloneuser3/members';
 import Account from '../pages/cloneuser3/account';
+import Error from '../pages/404';
 
 export default class Routes extends React.Component{
     render(){
@@ -32,7 +33,7 @@ export default class Routes extends React.Component{
                         </Route>
                         <Route path={`/${username}/boards`} component={HomeLogado}/>
                         <Route exact path="/kanBan" component={KanBan}/>             
-                       
+                        <Route component={Error}/>
                     </Switch>
 
                     <Switch>

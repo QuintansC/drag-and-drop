@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../styles/components/dashboard/NavVertical.module.scss';
+import { FaTrello } from 'react-icons/fa'
 
 export function NavVertical(){ 
 
@@ -22,7 +23,7 @@ export function NavVertical(){
   return(
     <nav className={styles.navVertical}>
         <ul>
-          <li><Link to="/gustavoquintans/boards">Quadros</Link></li>
+          <li><Link to="/gustavoquintans/boards"> <FaTrello size={10} /> Quadros</Link></li>
           <li><Link to="/templates">Modelos</Link></li>
           <li><Link to="/">Inicio</Link></li>
         </ul>
