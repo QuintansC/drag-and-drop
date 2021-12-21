@@ -4,11 +4,11 @@ import styles from '../../styles/components/initial/Login.module.scss';
 import images  from './../../images/index';
 import useLogin  from '../../hooks/login'
 import { LoginType } from '../../types';
-import { on } from 'stream';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
+    const [chargeVisivle, setChargeVisible] = useState(false);
     const {signIn, message, loading} = useLogin(); 
 
     function enviaForm(){
@@ -23,9 +23,17 @@ export default  function Login(props: LoginType){
             }
         });
     }
+    useEffect(()=>{
+        if(loading === true){
+            document.querySelector('.Loading')?.setAttribute('style', 'display: inline;')
+        }else{
+            document.querySelector('.Loading')?.setAttribute('style', 'display: none;')
+        }
+    }, [loading])
 
     return(
         <div className={styles.loginContent}>
+            <div className='Loading'><img src='/loading.gif' alt="" /></div>
             <img className={styles.logo} alt="logo" src={images.Logo}/>
             <p hidden>{message}</p>
             <div className={styles.form}>

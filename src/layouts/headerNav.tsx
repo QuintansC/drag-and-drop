@@ -25,9 +25,9 @@ function HomePricipal(props: any){
     );
   }else{
     return (
-      <div>
+      <>
         {props.history.push('/home')}
-      </div>
+      </>
     )
   }
 }

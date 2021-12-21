@@ -39,6 +39,6 @@ export default function Home(){
         else{
             window.location.href = "/"+user+"/boards";
         }     
-        return <div></div>
+        return <div>{window.location.href = "/"+user+"/boards"}</div>
     }
 }
