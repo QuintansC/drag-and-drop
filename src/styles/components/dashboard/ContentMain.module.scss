@@ -25,8 +25,8 @@
 
 .card{
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 170px;
+    height: 70px;
     margin-top: 10px;
     background-color: lightblue;
     padding: 15px;
@@ -37,9 +37,20 @@
         margin-left: 15px;
         background-color: rgb(140, 140, 255);
     }
+    .icon{
+        display: none;
+        position: absolute;
+        right: 5%;
+        bottom: 10%;
+        
+    }
 
     &:hover{
         opacity: .70;
+        .icon{
+            display: block;
+        }
     }
    
+    
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../styles/components/dashboard/NavVertical.module.scss';
 import { FaTrello, FaBorderAll } from 'react-icons/fa'
+import { BiPulse  } from 'react-icons/bi'
 
 export function NavVertical(){ 
 
@@ -55,9 +56,9 @@ export function NavVertical(){
   return(
     <nav className={styles.navVertical}>
         <ul>
-          <li><Link to={`/${user}/boards`} className={setActive('Quadros')}> <FaTrello size={15} /> Quadros</Link></li>
-          <li><Link to="/templates" className={setActive('Modelos')}> <FaBorderAll size={15} /> Modelos</Link></li>
-          <li><Link to="/">Inicio</Link></li>
+          <li className={setActive('Quadros')}><Link to={`/${user}/boards`}> <FaTrello size={15} /> Quadros</Link></li>
+          <li className={setActive('Modelos')}><Link to="/templates"> <FaBorderAll size={15} /> Modelos</Link></li>
+          <li className={setActive('Inicio')}><Link to="/"> <BiPulse size={15} />Inicio</Link></li>
         </ul>
         <h3>Area de trabalho</h3>
         <ul className={styles.project}>

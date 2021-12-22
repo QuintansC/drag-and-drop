@@ -1,4 +1,4 @@
-import { ContentMain } from '../components/dashboard/ContentMain';
+import { ContentMain }  from '../components/dashboard/ContentMain';
 import Layout from '../layouts/headerNav';
 function Templates(props: any){ 
   return(
