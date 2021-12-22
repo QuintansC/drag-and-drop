@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import Home from '../pages/home';
 import Login from '../components/initial/Login';
 import Cadastro from '../components/initial/Cadastro';
-import HomeLogado from '../pages/homeLogado';
+import Quadros from '../pages/quadros';
 import KanBan from '../pages/homeKanban';
+import Templates from '../pages/templates';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { DropzoneProvider } from '../contexts/DropzoneContext';
@@ -31,8 +32,9 @@ export default class Routes extends React.Component{
                         <Route exact path={`/${username}/${username}/boards`}>
                             <Redirect to={`/${username}/boards`}/>
                         </Route>
-                        <Route path={`/${username}/boards`} component={HomeLogado}/>
-                        <Route exact path="/kanBan" component={KanBan}/>             
+                        <Route path={`/${username}/boards`} component={Quadros}/>
+                        <Route exact path="/kanBan" component={KanBan}/> 
+                        <Route exact path="/templates" component={Templates}/>                  
                         <Route component={Error}/>
                     </Switch>
 

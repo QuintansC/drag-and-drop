@@ -1,11 +1,11 @@
 import { ContentMain } from '../components/dashboard/ContentMain';
 import Layout from '../layouts/headerNav';
-function HomePricipal(props: any){ 
+function Templates(props: any){ 
   return(
-    <Layout title="Quadros | Trello">
+    <Layout title="Templates | Trello">
       <ContentMain />
     </Layout>
   )
 }
 
-export default HomePricipal;
+export default Templates;

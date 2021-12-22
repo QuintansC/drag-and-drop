@@ -52,7 +52,7 @@ function Dashboard(props: any){
   }else{
     return (
       <div>
-        {props.history.push('/')}
+        {props.history.push('/home')}
       </div>
     )
   }
