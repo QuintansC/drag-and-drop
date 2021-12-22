@@ -1,6 +1,6 @@
 import { useEffect, useContext, useState } from 'react';
 import { NavComponents } from '../components/dashboard/NavComponents';
-import { NavVertical } from '../components/dashboard/NavVertical';
+import { NavVertical } from '../components/dashboard/NavVertical/index';
 import { DropzoneContext } from '../contexts/DropzoneContext';
 import styles from '../styles/pages/HomeLogado.module.scss';
 import { ContentMain } from '../components/dashboard/ContentMain';

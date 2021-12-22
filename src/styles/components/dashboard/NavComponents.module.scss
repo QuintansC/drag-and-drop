@@ -1,10 +1,11 @@
 .NavContent{
-    position:relative;
+    position:fixed;
     width: 100vw;
     height: 5vh;
     background-color: #026AA7;
     display: flex; 
     align-items: center;
+    z-index: 999;
     .logo{
         width: 68px;
         margin-left: 5px;
