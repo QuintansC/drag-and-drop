@@ -1,7 +1,7 @@
 body{
     overflow-x: hidden;
 }
-.navVertical{
+.navVerticalOpened{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -29,4 +29,9 @@ body{
         }
     }
     
+} 
+
+.navVerticalClosed{
+    transition: 1s;
+    display: none;    
 } 

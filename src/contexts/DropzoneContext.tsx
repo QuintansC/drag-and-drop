@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, Dispatch, ReactChildren, ReactNode, useEffect, useState } from 'react';
 
 interface DropzoneProviderProps{
     children: ReactNode;
@@ -7,10 +7,12 @@ interface DropzoneProviderProps{
 interface DropzoneContextData{
     dropzoneEnabled: boolean,
     token: string,
+    open: boolean,
     enableDropzone: () => void,
     disableDropzone: () => void,
     setToken: (tokens: string, name: string) => void,
     getToken: () => string,
+    setOpen: (value: boolean)=> void,
 }
 export const DropzoneContext = createContext({} as DropzoneContextData);
 
@@ -18,6 +20,12 @@ export const DropzoneContext = createContext({} as DropzoneContextData);
 export function DropzoneProvider({children}: DropzoneProviderProps){
     const [dropzoneEnabled, setDropzoneEnabled] = useState(false);
     const [token, setTokens] = useState('');
+    const [open, setOpened] = useState(true);
+
+    function setOpen(value: boolean){
+        setOpened(value);
+        console.log(value)
+    }
 
     function enableDropzone(){
         setDropzoneEnabled(true);
@@ -44,10 +52,12 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
             value={{
                 dropzoneEnabled,
                 token,
+                open,
                 enableDropzone,
                 disableDropzone,
                 setToken,
-                getToken                             
+                getToken,
+                setOpen                         
             }}
         >
             {children}

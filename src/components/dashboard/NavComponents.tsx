@@ -1,15 +1,21 @@
 import styles from '../../styles/components/dashboard/NavComponents.module.scss';
 import Logout from '../../images/logout.svg';
 import { time } from 'console';
+import { useContext } from 'react';
+import { DropzoneContext } from '../../contexts/DropzoneContext';
 
 export function NavComponents(props: any){
+  const { open, setOpen } = useContext(DropzoneContext)
   function sair(){
     sessionStorage.clear();
     window.location.href = '/home';
   }
   return(
     <nav className={styles.NavContent}>
-      <button className={styles.menu} type="button"><img src="/menu.png" alt=""></img></button>
+      <button onClick={({currentTarget})=>{
+        setOpen(!open);
+      }} 
+      className={styles.menu} type="button"><img src="/menu.png" alt=""></img></button>
       <img src="/logo.gif" alt="Trello" className={styles.logo} />
       <div className={styles.links}>
         <a 

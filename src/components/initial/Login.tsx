@@ -8,7 +8,6 @@ import { LoginType } from '../../types';
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
-    const [chargeVisivle, setChargeVisible] = useState(false);
     const {signIn, message, loading} = useLogin(); 
 
     function enviaForm(){
@@ -25,7 +24,7 @@ export default  function Login(props: LoginType){
     }
     useEffect(()=>{
         if(loading === true){
-            document.querySelector('.Loading')?.setAttribute('style', 'display: inline;')
+            document.querySelector('.Loading')?.setAttribute('style', 'display: flex;')
         }else{
             document.querySelector('.Loading')?.setAttribute('style', 'display: none;')
         }
