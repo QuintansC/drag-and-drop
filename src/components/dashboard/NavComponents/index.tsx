@@ -1,8 +1,7 @@
-import styles from '../../styles/components/dashboard/NavComponents.module.scss';
-import Logout from '../../images/logout.svg';
-import { time } from 'console';
+import styles from './styles.module.scss';
+import Logout from '../../../images/logout.svg';
 import { useContext } from 'react';
-import { DropzoneContext } from '../../contexts/DropzoneContext';
+import { DropzoneContext } from '../../../contexts/DropzoneContext';
 
 export function NavComponents(props: any){
   const { open, setOpen } = useContext(DropzoneContext)

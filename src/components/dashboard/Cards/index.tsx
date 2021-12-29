@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
-import { DropzoneContext } from '../../contexts/DropzoneContext';
-import styles from '../../styles/components/dashboard/Card.module.scss';
+import { DropzoneContext } from '../../../contexts/DropzoneContext';
+import styles from './styles.module.scss';
 
 interface CardProps{
     color: string,

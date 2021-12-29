@@ -8,7 +8,6 @@ import Templates from '../pages/templates';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { DropzoneProvider } from '../contexts/DropzoneContext';
-import {  } from '../components/dashboard/NavComponents';
 import GettingStarted from '../pages/cloneuser3/getting-started';
 import Highlights from '../pages/cloneuser3/highlights';
 import Tables from '../pages/cloneuser3/tables';
