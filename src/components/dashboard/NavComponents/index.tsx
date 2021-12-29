@@ -11,7 +11,7 @@ export function NavComponents(props: any){
   }
   return(
     <nav className={styles.NavContent}>
-      <button onClick={({currentTarget})=>{
+      <button onClick={()=>{
         setOpen(!open);
       }} 
       className={styles.menu} type="button"><img src="/menu.png" alt=""></img></button>

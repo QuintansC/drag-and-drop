@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useEffect, useState } from 'react';
-import styles from '../../styles/components/initial/Login.module.scss';
-import images  from './../../images/index';
-import useLogin  from '../../hooks/login'
-import { LoginType } from '../../types';
+import styles from './styles.module.scss';
+import images  from '../../../images/index';
+import useLogin  from '../../../hooks/login';
+import { LoginType } from '../../../types';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');

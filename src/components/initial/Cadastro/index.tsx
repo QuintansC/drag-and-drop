@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from '../../styles/components/initial/Cadastro.module.scss';
-import svg from './../../images/index';
-import { CadastroType } from '../../types';
-import useCadastrar from '../../hooks/cadastrar';
+import styles from './styles.module.scss';
+import svg from '../../../images/index';
+import { CadastroType } from '../../../types';
+import useCadastrar from '../../../hooks/cadastrar';
 
 export default function Cadastrar(props: CadastroType){
     const [login, setLogin] = useState('');
