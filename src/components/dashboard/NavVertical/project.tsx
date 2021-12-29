@@ -1,5 +1,4 @@
-import styles from '../../../styles/components/dashboard/NavVertical/project.module.scss';
-import { FaRegStar } from 'react-icons/fa';
+import styles from './styles/project.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 

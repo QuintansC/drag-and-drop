@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/dashboard/ContentMain.module.scss';
+import styles from './styles.module.scss';
 import { FaRegClock } from 'react-icons/fa';
 import { Cards } from './cards';
 import { useContext } from 'react';
@@ -13,6 +13,8 @@ export function ContentMain(){
           <Cards name="Projeto 1"/>
           <Cards name="Projeto 2"/>
       </div>
+
+      <span className={styles.workTitle}> <b>SUAS ÁREAS DE TRABALHO</b></span>
     </div>
     )
  

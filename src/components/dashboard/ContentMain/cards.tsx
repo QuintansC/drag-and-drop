@@ -1,4 +1,4 @@
-import styles from '../../../styles/components/dashboard/ContentMain.module.scss';
+import styles from './styles.module.scss';
 import { FaRegStar } from 'react-icons/fa'
 
 export function Cards (props: any){

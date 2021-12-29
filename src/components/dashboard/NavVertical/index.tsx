@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from '../../../styles/components/dashboard/NavVertical/index.module.scss';
+import styles from './styles/index.module.scss';
 import { FaTrello, FaBorderAll } from 'react-icons/fa';
 import { BiPulse  } from 'react-icons/bi';
 
