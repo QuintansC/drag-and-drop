@@ -45,8 +45,9 @@ export function NavVertical(){
           <li className={setActive('Quadros')}><Link to={`/${user}/boards`}> <FaTrello size={15} /> Quadros</Link></li>
           <li className={setActive('Modelos')}><Link to="/templates"> <FaBorderAll size={15} /> Modelos</Link></li>
           <li className={setActive('Inicio')}><Link to="/"> <BiPulse size={15} />Inicio</Link></li>
+          <h3>Area de trabalho</h3>
         </ul>
-        <h3>Area de trabalho</h3>
+        
       <Project name='Trello' />
       <Project name='[Clone] Trello' />
     </nav>

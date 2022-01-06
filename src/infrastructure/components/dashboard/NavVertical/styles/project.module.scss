@@ -1,8 +1,22 @@
 .project{
     opacity: 1;
-    button b{
-        color: black;
-        font-size: 15px;
+    button {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        b{
+            margin-left: 10px;
+            color: black;
+            font-size: 15px;
+        }
+        svg:last-child{
+            position: absolute;
+            margin-left: 220px;
+            @media (min-width: 1368px) {
+                margin-left: 320px;
+            }
+            filter: invert(1);
+        }
     }
     li{
         margin-left: 7%;

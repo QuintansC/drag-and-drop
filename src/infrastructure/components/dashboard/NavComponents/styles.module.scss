@@ -49,9 +49,13 @@
         display: flex;
         justify-content: space-evenly;
         width: 22%;
-        height: 3.8vh;
-        left: 45vw;
+        height: 4.5vh;
+        left: 46.5vw;
         margin: auto 0;
+        button{
+            filter: invert(1);
+            background-color: transparent;
+        }
         #searchNav{
             width: 250px;
         }
@@ -63,7 +67,7 @@
 
     @media (max-width: 1368px) {
         .perfil{
-            left: 30vw;
+            left: 33vw;
         }
     }
 }
@@ -79,6 +83,11 @@
         margin: 0;
         margin-left: 0.7rem;
         width: 15px;
+        filter: invert(1);
+    }
+    a:hover{
+        border-radius: 4px;
+        background-color: #ffffff36;
     }
     button{ 
         background-color: #025180;
@@ -96,4 +105,5 @@
         margin: 0 4px 0 0;
         padding: 0;
     }
+   
 }
