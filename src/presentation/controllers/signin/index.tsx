@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import svg from '../../../infrastructure/images/index';
 import { CadastroType } from '../../protocols';
@@ -9,7 +9,7 @@ export default function Cadastrar(props: CadastroType){
     const [senha, setSenha] = useState('');
     const [email, setEmail] = useState('');
 
-    const { signUp } = useCadastrar();
+    const { signUp, message, loading } = useCadastrar();
     
     function enviaForm(){
         var queris = document.querySelectorAll('input');
@@ -28,9 +28,19 @@ export default function Cadastrar(props: CadastroType){
         });
     }
 
+
+    useEffect(()=>{
+        if(loading === true){
+            document.querySelector('.Loading')?.setAttribute('style', 'display: flex;')
+        }else{
+            document.querySelector('.Loading')?.setAttribute('style', 'display: none;')
+        }
+    }, [loading])
     return(
         <div className={styles.cadastroContent}>
-            <img alt="logo" src={svg.Logo}/>
+            <div className='Loading'><img src='/loading.gif' alt="" /></div>
+            <img className={styles.Logo} alt="logo" src={svg.Logo} />
+            <p hidden>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
                     <h2>Crie sua conta</h2>

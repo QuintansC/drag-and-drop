@@ -17,16 +17,16 @@ const useLogin = ()=>{
                 user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(function(res){    
-                //console.log(res.data)            
+                //console.log(res.data)
+                setLoading(false)
                 setToken(res.data.token, login.toLocaleLowerCase())
                 setMessage(res.data.message)   
-                setLoading(false)
                 history.push(`${login}/boards`)            
             }).catch(function(err){
                 const message: string = err.response.data.message;
                 console.log(err.response.data)
-                setMessage(message)
                 setLoading(false)
+                setMessage(message)
                 swal("Algo deu errado 😢!", message, "error")
             })
         }

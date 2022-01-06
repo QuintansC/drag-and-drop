@@ -61,7 +61,7 @@
         left: 40%;
         color: black;
     }
-    img{
+    img.Logo{
         position: relative;
         display: flex;
         height: 80%;
@@ -78,6 +78,9 @@
         line-height: 5px;
         img{
             position: absolute;
+            display: flex;
+            height: 80%;
+            width: 30%;
             top: 7%;
         }
     }
