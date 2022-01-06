@@ -1,7 +1,10 @@
 .NavContent{
     position:fixed;
     width: 100vw;
-    height: 5vh;
+    height: 7vh;
+    @media (min-width: 1368px) {
+        height: 5vh;
+    }
     background-color: #026AA7;
     display: flex; 
     align-items: center;
@@ -17,8 +20,11 @@
         padding: 0 12px;
     }
     
-    button:hover{
+    button:hover:not(.buttonUser){
         background-color: #ffffff36;
+    }
+    button{
+        border: 0;
     }
 
     button.menu{
@@ -40,9 +46,28 @@
     }
     .perfil{
         position: relative;
-        left: 40vw;
+        display: flex;
+        justify-content: space-evenly;
+        width: 22%;
+        height: 3.8vh;
+        left: 45vw;
+        margin: auto 0;
+        #searchNav{
+            width: 250px;
+        }
+        .buttonUser{
+            width: 4.5vh;
+            border-radius: 50%;
+        }
+    }
+
+    @media (max-width: 1368px) {
+        .perfil{
+            left: 30vw;
+        }
     }
 }
+    
 
 .links{
     display: flex;

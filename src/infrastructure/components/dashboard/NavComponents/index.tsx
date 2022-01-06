@@ -1,10 +1,14 @@
 import styles from './styles.module.scss';
-import Logout from '../../../images/logout.svg';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DropzoneContext } from '../../../../utils/contexts/DropzoneContext';
+
+import { FaBell, FaRegBell, FaUserAlt } from 'react-icons/fa';
+
+import { BiInfoCircle } from 'react-icons/bi';
 
 export function NavComponents(props: any){
   const { open, setOpen } = useContext(DropzoneContext)
+  const [haveNotify, setHaveNotify] = useState(false)
   function sair(){
     sessionStorage.clear();
     window.location.href = '/home';
@@ -42,12 +46,10 @@ export function NavComponents(props: any){
       </div>
 
       <div className={styles.perfil}>
-        <button 
-          onClick={sair}
-          className={styles.buttonAnimate}
-        >
-          Sair <img src={Logout} alt="logout"/>
-        </button>
+        <input type="search" name="searchNav" id={styles.searchNav} />
+        <button className={styles.buttonOption}><BiInfoCircle size={15}/></button>
+        <button className={styles.buttonOption} onClick={()=>setHaveNotify(!haveNotify)}>{haveNotify === true?<FaBell size={15}/>:<FaRegBell size={15}/>}</button>
+        <button className={styles.buttonUser} onClick={sair}><FaUserAlt size={15}/></button>
       </div>
     </nav>
   )
