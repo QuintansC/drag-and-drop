@@ -49,7 +49,7 @@
         display: flex;
         justify-content: space-evenly;
         width: 22%;
-        height: 4.5vh;
+        height: 4vh;
         left: 46.5vw;
         margin: auto 0;
         button{
@@ -58,6 +58,7 @@
         }
         #searchNav{
             width: 250px;
+            margin: 3px 0;
         }
         .buttonUser{
             width: 4.5vh;
