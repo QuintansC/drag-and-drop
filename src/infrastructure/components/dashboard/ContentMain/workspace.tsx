@@ -19,7 +19,7 @@ export function Workspace(props: any){
                 <button className={styles.buttonWorkspace}> <RiSettings3Fill size={15} /> Configurações </button>
                 <button className={styles.buttonWorkspace}> <GrUpdate size={15}/> Atualizar </button>
             </div>
-            <Cards name={props.nameCard}/>
+            <Cards name={props.nameCard} color={props.color}/>
         </div>
     )
 }

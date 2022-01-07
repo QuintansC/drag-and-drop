@@ -15,7 +15,7 @@ export function ContentMain(){
         <Cards name="Projeto 2"/>
       </div>
       <span className={styles.workTitle}> <b>SUAS ÁREAS DE TRABALHO</b></span>
-      <Workspace nameWorkspace="Metrocomm" nameCard="Drag and Drop"/>
+      <Workspace nameWorkspace="Metrocomm" nameCard="Drag and Drop" color="url(/backgroundCard.jpg)"/>
       <Workspace nameWorkspace="Ancr" nameCard="Ancr Projetos" />
       <span className={styles.workTitle}> <b> ÁREAS DE TRABALHO DO CONVIDADO</b></span>
       <Workspace nameWorkspace="Metrocomm" nameCard="Drag and Drop"/>
