@@ -17,6 +17,7 @@ body{
             background-color: transparent;
             border: 0;
             color: white;
+            width: 100%;
         }
         li{
             line-height: 35px;
@@ -24,7 +25,7 @@ body{
                 margin: 0 7px 0 0px;
             }
         }
-        li:hover{
+        li:hover, button:hover{
             background-color: rgba(0, 0, 0, 0.205);
         }
     }

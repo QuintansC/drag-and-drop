@@ -126,6 +126,16 @@
     }
 }
 
+.allBoards{
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+    &:hover{
+        background-color: #00000020;
+    }
+}
+
 .workTitle{
     margin-top: 25px;
 }

@@ -20,6 +20,9 @@ export function ContentMain(){
       <Workspace nameWorkspace="Ancr" nameCard="Ancr Projetos" />
       <span className={styles.workTitle}> <b> ÁREAS DE TRABALHO DO CONVIDADO</b></span>
       <OtherWorkspace nameUser="Evandro Ribeiro" nameCard="Drag and Drop"/>
+      <div className={styles.rows}>
+        <button className={styles.allBoards}>Ver todos os quadros fechados</button>
+      </div>
     </div>
     )
  

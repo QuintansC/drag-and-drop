@@ -4,6 +4,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        line-height: 30px;
         b{
             margin-left: 10px;
             color: black;
@@ -11,7 +12,7 @@
         }
         svg:last-child{
             position: absolute;
-            margin-left: 220px;
+            margin-left: 195px;
             @media (min-width: 1368px) {
                 margin-left: 320px;
             }
@@ -19,6 +20,6 @@
         }
     }
     li{
-        margin-left: 7%;
+        padding-left: 7%;
     }
 }
