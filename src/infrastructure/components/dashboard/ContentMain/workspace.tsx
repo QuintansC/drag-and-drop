@@ -4,6 +4,7 @@ import { FaCube, FaTrello } from 'react-icons/fa';
 import { BiTable, BiUser } from 'react-icons/bi';
 import { RiSettings3Fill } from 'react-icons/ri';
 import { GrUpdate } from 'react-icons/gr';
+import { NewCards } from './newCards';
 
 export function Workspace(props: any){ 
   return(
@@ -19,7 +20,10 @@ export function Workspace(props: any){
                 <button className={styles.buttonWorkspace}> <RiSettings3Fill size={15} /> Configurações </button>
                 <button className={styles.buttonWorkspace}> <GrUpdate size={15}/> Atualizar </button>
             </div>
-            <Cards name={props.nameCard} color={props.color}/>
+            <div className={styles.row}>
+                <Cards name={props.nameCard} color={props.color}/>
+                <NewCards name={props.nameCard} color={props.color}/>
+            </div>
         </div>
     )
 }

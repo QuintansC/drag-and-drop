@@ -44,7 +44,7 @@ export default function Cadastrar(props: CadastroType){
             <div className={styles.form}>
                 <form method="POST">
                     <h2>Crie sua conta</h2>
-                    <input type="email" title="email" placeholder="Insira seu e-mail"/>
+                    <input type="email" title="email" placeholder="Insira seu e-mail" required/>
                     <input type="text" title="user" placeholder="Seu Nome de Usuário"/>
                     <input type="password" title="password" onChange={enviaForm} placeholder="Sua Senha"></input>
                     
