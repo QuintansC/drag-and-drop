@@ -110,5 +110,23 @@
         margin: 0 4px 0 0;
         padding: 0;
     }
+    div{
+        height: 44px;
+        a{
+            height: 100%;
+        }
+        ul{
+            position: absolute;
+            width: auto;
+            list-style: none;
+            background-color: red;
+            margin-top: 0px;
+            padding: 10px 20px;
+            .closeDropDown{
+                position: relative;
+                left: 95%;
+            }
+        }
+    }
    
 }

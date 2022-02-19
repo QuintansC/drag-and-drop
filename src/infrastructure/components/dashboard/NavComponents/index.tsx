@@ -8,6 +8,7 @@ import { BiInfoCircle } from 'react-icons/bi';
 
 export function NavComponents(props: any){
   const { open, setOpen } = useContext(DropzoneContext)
+  const [openMenu, setOpenMenu] = useState(false)
   const [haveNotify, setHaveNotify] = useState(false)
   function sair(){
     sessionStorage.clear();
@@ -21,13 +22,25 @@ export function NavComponents(props: any){
       className={styles.menu} type="button"><img src="/menu.png" alt=""></img></button>
       <img src="/logo.gif" alt="Trello" className={styles.logo} />
       <div className={styles.links}>
-        <a 
-          href="http://localhost:3000/"
-          className={styles.buttonAnimate}
-        >
-          Área de trabalho<img src="/down-arrow.png"  alt="new"/>
-        </a>  
-
+        <div>
+          <a 
+            href="#"
+            className={styles.buttonAnimate}
+            onClick={()=>{
+              setOpenMenu(!openMenu);
+            }}
+          >
+            Área de trabalho<img src="/down-arrow.png"  alt="new"/>
+          </a> 
+          <ul style={openMenu?{ display: 'block'}:{display: 'none'}}>
+            <li className={styles.closeDropDown}> X </li>
+            <span>Suas Áreas de trabalho</span>
+            <li>Clone Trello</li>
+            <li>Metrocomm</li>
+            <span>Áreas de trabalho do convidado</span>
+            <li>Evandro Ribeiro</li>
+          </ul> 
+        </div>
         <a 
           href="http://localhost:3000/" 
           className={styles.buttonAnimate}
