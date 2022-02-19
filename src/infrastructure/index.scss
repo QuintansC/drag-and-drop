@@ -1,4 +1,12 @@
 html{
+	&::-webkit-scrollbar{
+        background-color: rgba(211, 211, 211, 0.3);
+        width: 12px;    
+    }
+    &::-webkit-scrollbar-thumb{ 
+        background-color: rgba(54, 54, 54, 0.3);
+        border-radius: 25px;
+    }
 	--red-light: #e06767;
 	font-family: 'Nunito';
 	margin: 0; 
