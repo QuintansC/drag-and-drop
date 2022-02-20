@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { useContext, useState } from 'react';
+import { Fragment, useContext, useState } from 'react';
 import { DropzoneContext } from '../../../../utils/contexts/DropzoneContext';
 
 import { FaBell, FaRegBell, FaUserAlt } from 'react-icons/fa';
@@ -33,12 +33,12 @@ export function NavComponents(props: any){
             Área de trabalho<img src="/down-arrow.png"  alt="new"/>
           </a> 
           <ul style={openMenu?{ display: 'block'}:{display: 'none'}}>
-            <li className={styles.closeDropDown}> X </li>
+            <li className={styles.closeDropDown}><div /> Área de trabalo <b> X </b></li>
             <span>Suas Áreas de trabalho</span>
-            <li>Clone Trello</li>
-            <li>Metrocomm</li>
+            <li><a href='#'> Clone Trello </a></li>
+            <li><a href='#'>Metrocomm </a></li>
             <span>Áreas de trabalho do convidado</span>
-            <li>Evandro Ribeiro</li>
+            <li><a href='#'>Evandro Ribeiro</a></li>
           </ul> 
         </div>
         <a 
