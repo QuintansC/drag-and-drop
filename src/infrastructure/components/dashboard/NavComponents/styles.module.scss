@@ -58,10 +58,35 @@
             background-color: transparent;
         }
         #searchNav{
+            border: 1px solid white;
+            border-radius: 4px;
+            opacity: .3;
             width: 250px;
             margin: 3px 0;
+            background-color: rgb(255, 255, 255);
             @media (max-width: 1366px) {
                 margin: 0px;
+            }
+            &::placeholder{
+                position: relative;
+                left: 5px;
+                color: rgb(8, 8, 8);
+                opacity: 1;                
+            }
+            &:hover{
+                opacity: .8;
+            }
+            &:focus-visible{
+                box-shadow: 0 0 0 0;
+                border: 0 none;
+                outline: 0;
+            }
+            &:focus{
+                &::placeholder{
+                    color: rgba(8, 8, 8, .3);
+                }
+                background-color: rgb(255, 255, 255);
+                opacity: 1;
             }
         }
         .buttonUser{
@@ -111,7 +136,7 @@
         padding: 0;
     }
     div{
-        height: 44px;
+        height: 35px;
         a{
             height: 100%;
         }

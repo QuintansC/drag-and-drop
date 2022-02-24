@@ -59,7 +59,7 @@ export function NavComponents(props: any){
       </div>
 
       <div className={styles.perfil}>
-        <input type="search" name="searchNav" id={styles.searchNav} />
+        <input placeholder="🔎    Pesquisar" type="search" name="searchNav" id={styles.searchNav} />
         <button className={styles.buttonOption}><BiInfoCircle size={20}/></button>
         <button className={styles.buttonOption} onClick={()=>setHaveNotify(!haveNotify)}>{haveNotify === true?<FaBell size={17}/>:<FaRegBell size={17}/>}</button>
         <button className={styles.buttonUser} onClick={sair}><FaUserAlt size={15}/></button>
