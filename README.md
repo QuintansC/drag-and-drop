@@ -70,8 +70,7 @@ $ yarn start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
-## Detalhes da aplicação  
-## `Qualquer ajuda será bem vinda!` 
+## Detalhes da aplicação  ` 
 <br>
 Ainda em desenvolvimento, o projeto tem como objetivo apenas estudo na Linguaguem de Programação Javascript e no Framework ReactJS <br>
 Necessario Recriar Drag and drop - https://www.youtube.com/watch?v=awRtgpRsdTQ&ab_channel=Rocketseat
