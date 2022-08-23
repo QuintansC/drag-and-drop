@@ -5,6 +5,7 @@ import { DropzoneContext } from '../../../../utils/contexts/DropzoneContext';
 import { FaBell, FaRegBell, FaUserAlt } from 'react-icons/fa';
 
 import { BiInfoCircle } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 export function NavComponents(props: any){
   const { open, setOpen } = useContext(DropzoneContext)
@@ -23,37 +24,37 @@ export function NavComponents(props: any){
       <img src="/logo.gif" alt="Trello" className={styles.logo} />
       <div className={styles.links}>
         <div>
-          <a 
-            href="#"
+          <Link 
+            to='#'
             className={styles.buttonAnimate}
             onClick={()=>{
               setOpenMenu(!openMenu);
             }}
           >
             Área de trabalho<img src="/down-arrow.png"  alt="new"/>
-          </a> 
+          </Link> 
           <ul style={openMenu?{ display: 'block'}:{display: 'none'}}>
             <li className={styles.closeDropDown}><div /> Área de trabalo <b> X </b></li>
             <span>Suas Áreas de trabalho</span>
-            <li><a href='#'> Clone Trello </a></li>
-            <li><a href='#'>Metrocomm </a></li>
+            <li><Link to='#'> Clone Trello </Link></li>
+            <li><Link to='#'>Metrocomm </Link></li>
             <span>Áreas de trabalho do convidado</span>
-            <li><a href='#'>Evandro Ribeiro</a></li>
+            <li><Link to='#'>Evandro Ribeiro</Link></li>
           </ul> 
         </div>
-        <a 
-          href="http://localhost:3000/" 
+        <Link 
+          to="http://localhost:3000/" 
           className={styles.buttonAnimate}
         >
           Recente<img src="/down-arrow.png" alt="save"/>
-        </a>
+        </Link>
 
-        <a 
-          href="http://localhost:3000/" 
+        <Link 
+          to="http://localhost:3000/" 
           className={styles.buttonAnimate}
         >
           Marcado com estrela<img src="/down-arrow.png" alt="add cart"/>
-        </a>
+        </Link>
 
         <button type="button"> <span>Criar</span> </button>
       </div>
