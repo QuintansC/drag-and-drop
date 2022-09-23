@@ -1,0 +1,20 @@
+.HomeContentOpened{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 30px 50px;
+    width: 100%;
+    margin-left: 25%;
+    margin-top: 5vh;
+}
+
+
+.HomeContentClosed{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 30px 50px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 5vh;
+}

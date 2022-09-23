@@ -6,10 +6,10 @@ import { DropzoneContext } from '../../../../utils/contexts/DropzoneContext';
 import { Workspace } from './workspace';
 import { OtherWorkspace } from './otherWorkspace';
 
-export function ContentMain(){ 
+export function HomeContent(){ 
   const { open } = useContext(DropzoneContext)
   return(
-    <div className={open?styles.HomeContentOpened: styles.HomeContentClosed}>
+    <>
       <span className={styles.titleSpan}> <FaRegClock size={25} /> <b>Visualizado recentemente</b></span>
       <div className={styles.row}>
         <Cards name="Projeto 1"/>
@@ -23,7 +23,7 @@ export function ContentMain(){
       <div className={styles.rows}>
         <button className={styles.allBoards}>Ver todos os quadros fechados</button>
       </div>
-    </div>
+    </>
     )
  
 }

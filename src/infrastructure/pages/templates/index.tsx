@@ -1,9 +1,22 @@
-import { ContentMain }  from '../../components/dashboard/ContentMain';
+import { HomeContent as TemplatesContent } from '../../components/dashboard/HomeContent';
 import Layout from '../../../utils/layouts';
-function Templates(props: any){ 
+import { Container } from '../../components/dashboard/Container';
+import useCategories from '../../../data/categories';
+function Templates(){ 
+  const { data } = useCategories()
   return(
     <Layout title="Templates | Trello">
-      <ContentMain />
+      <Container>
+        {
+          data.map((target: any)=>{
+          return (
+            <div key={target.id}>
+              {target.name}
+            </div>
+          )})
+        }
+        <TemplatesContent></TemplatesContent>
+      </Container>    
     </Layout>
   )
 }

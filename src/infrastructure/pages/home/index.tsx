@@ -38,7 +38,6 @@ export default function Home(){
     );}
     else{
         let user = sessionStorage.getItem('usernameTrello');
-        console.log(user)
         if(user === null){
             return <Redirect to="/home" />
         }
