@@ -2,6 +2,7 @@
   "name": "drag-and-drop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://quintansc.github.io/drag-and-drop/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -27,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^7.0.1",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.2.3"
   }
 }
