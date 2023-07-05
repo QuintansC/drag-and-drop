@@ -13,7 +13,7 @@ const useLogin = ()=>{
     async function signIn (login:string , senha:string){
         setLoading(true)
         try{
-            await api.post('/login',{
+            await api.post('/signin',{
                 user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(function(res){    

@@ -30,14 +30,14 @@
         justify-content: center;
         bottom: 30px;
         input {
-            margin-top: 5px;
+            margin: 10px 0;
             display: block;
             line-height: 15px;
-            width: 230px;
-            height: 30px;
+            width: 280px;
+            height: 35px;
             transition: 1s;
-            border: transparent;
-            box-shadow: 2px 2px 2px grey;
+            border: 1px solid #00000026;
+            box-shadow: 3px 3px 3px grey;
         }
         div{
             position: absolute;
@@ -57,7 +57,7 @@
                 left: 50%;
                 font-size: 16px;
             }
-            .submitButto{
+            .submitButton{
                 position: relative;
                 width: 85%;
                 background-color: white;
@@ -65,12 +65,17 @@
                 box-shadow: 0 0 1.5px black;
                 margin-top: 8px !important;
                 height: 40px;
-                line-height: 0px;
+                line-height: 0px;                              
+                            
                 img{
                     position: absolute;
                     top: 7%;
                 }
             }
-        }        
+        }   
+        div button:first-child{
+            background-color: rgb(2, 165, 2);
+            color: white;
+        }     
     }
 }
