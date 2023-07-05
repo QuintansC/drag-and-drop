@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Home from './pages/home';
-import Login from '../presentation/controllers/signup';
-import Cadastro from '../presentation/controllers/signin';
+import Login from '../presentation/controllers/signin';
+import Cadastro from '../presentation/controllers/signup';
 import Quadros from './pages/quadros/index';
 import KanBan from './pages/homeKanban/index';
 import Templates from './pages/templates/index';
