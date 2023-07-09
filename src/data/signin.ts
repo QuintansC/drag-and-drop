@@ -17,7 +17,6 @@ const useLogin = ()=>{
                 user: login.toLocaleLowerCase(),
                 password: senha,
             }).then(function(res){    
-                //console.log(res.data)
                 setLoading(false)
                 setToken(res.data.token, login.toLocaleLowerCase())
                 setMessage(res.data.message)   
