@@ -1,0 +1,184 @@
+.NavContent{
+    position:fixed;
+    width: 100vw;
+    height: 7vh;
+    background-color: #026AA7;
+    display: flex; 
+    align-items: center;
+    z-index: 999;
+}
+    
+.NavContent .logo{
+    width: 68px;
+    margin-left: 5px;
+}
+
+.NavContent button span {
+    margin: 0;
+    font-weight: 400;
+    padding: 0 12px;
+}
+
+.NavContent button:hover:not(.buttonUser){
+    background-color: #ffffff36;
+}
+.NavContent button{
+    border: 0;
+}
+
+.NavContent button.menu{
+    background-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: none;
+    height: 26px;
+    line-height: 1px;
+    margin: 2px 3px 2px 6px;
+    padding: 1px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.NavContent button.menu img{
+    height: 90%;
+    filter: invert(1);
+}
+.NavContent .perfil{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 22%;
+    height: 4vh;
+    left: 46.5vw;
+    margin: auto 0;
+    
+}
+
+.NavContent .perfil button{
+    filter: invert(1);
+    background-color: transparent;
+}
+.NavContent .perfil #searchNav{
+    border: 1px solid white;
+    border-radius: 4px;
+    opacity: .3;
+    width: 250px;
+    margin: 3px 0;
+    background-color: rgb(255, 255, 255);   
+}
+
+.NavContent .perfil #searchNav::placeholder{
+    position: relative;
+    left: 5px;
+    color: rgb(8, 8, 8);
+    opacity: 1;                
+}
+.NavContent .perfil #searchNav:hover{
+    opacity: .8;
+}
+.NavContent .perfil #searchNav:focus-visible{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+.NavContent .perfil #searchNav:focus{
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+}
+.NavContent .perfil #searchNav:focus::placeholder{
+    color: rgba(8, 8, 8, .3);
+}
+.NavContent .perfil .buttonUser{
+    width: 4.5vh;
+    border-radius: 50%;
+}
+    
+
+.links{
+    display: flex;
+    position: relative;
+    left: 2vh;   
+}
+
+.links div{
+    height: 35px;
+}
+
+.links div a{
+    height: 100%;
+}
+.links div ul{
+    position: absolute;
+    width: auto;
+    list-style: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    margin-top: 0px;
+    padding: 10px 20px;
+    
+}
+.links div ul span{
+    font-weight: 700;
+    font-size: 13px;
+}
+.links div ul li{
+ 
+    font-size: 14px;
+}
+.links div ul li a{ color: black; margin: 0; padding: 0;}
+.links div ul .closeDropDown{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.links a img{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.7rem;
+    width: 15px;
+    filter: invert(1);
+}
+.links a:hover{
+    border-radius: 4px;
+    background-color: #ffffff36;
+}
+.links button{ 
+    background-color: #025180;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+    text-decoration: none;
+    align-items: center;
+    box-shadow: none;
+    color: #FFFFFF;
+    display: flex;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 4px 0 0;
+    padding: 0;
+}
+
+@media (max-width: 1368px) {
+    .NavContent .perfil{
+        left: 31vw;
+    }
+}
+
+@media (min-width: 1368px) {
+    .NavContent{
+        height: 5vh;
+    }
+}
+
+@media (max-width: 1366px) {
+    .NavContent .perfil #searchNav{
+        margin: 0px;
+    }
+    
+}

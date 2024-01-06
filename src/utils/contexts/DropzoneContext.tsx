@@ -1,5 +1,5 @@
-import { createContext, Dispatch, ReactChildren, ReactNode, useEffect, useState } from 'react';
-
+"use client"
+import { createContext, ReactNode, useState } from 'react';
 interface DropzoneProviderProps{
     children: ReactNode;
 }
@@ -37,9 +37,11 @@ export function DropzoneProvider({children}: DropzoneProviderProps){
 
     function setToken(tokens: string, name: string){
         //Setar nos cookies
-        setTokens(tokens);
-        sessionStorage.setItem('tokenTrello', tokens)
-        sessionStorage.setItem('usernameTrello', name)
+        if (typeof window !== 'undefined') {
+            setTokens(tokens);
+            sessionStorage.setItem('tokenTrello', tokens)
+            sessionStorage.setItem('usernameTrello', name)
+        }
     }
 
     function getToken(){

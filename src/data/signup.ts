@@ -1,10 +1,10 @@
+import { useRouter } from 'next/router';
 import api from '../utils/api';
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom';
 import swal from 'sweetalert';
 
 const useCadastrar = ()=>{
-    const history = useHistory();
+    const history = useRouter();
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false)
 

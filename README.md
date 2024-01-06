@@ -1,76 +1,36 @@
-# Recriando o Interface do Trello
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Interface do Trello sendo utilizada para estilização de um projeto Kanban
+## Getting Started
 
-<h4 align="center"> 
-	🚧  React Kanban 🚀 Em construção...  🚧
-</h4>
-
-### Em desenvolvimento
-- [x] Dashboard
-### Features
-
-- [x] Home
-- [x] Cadastro
-- [x] Login
-- [ ] Recriar Drag and drop
-- [ ] Dashboard
-- [ ] Actions
-- [ ] Api em Node
-
-Indices da aplicação
-=================
-<!--ts-->
-   * [Features](#Features)
-   * [Tecnologias](#tecnologias)
-   * [Instalação](#instalação)
-   * [Como usar](#comandos)
-   * [Sobre](#Detalhes-da-aplicação)
-<!--te-->
-
-<details>
-  <summary>Telas da aplicação</summary>
-    <img src="src/images/README/home.png" width='340px' height='150px'>
-    <img src="src/images/README/cadastro.jpeg" width='340px' height='150px'>
-    <img src="src/images/README/login.jpeg" width='340px' height='150px'>
-</details>
-
-
-
-## Tecnologias
-
-<br>
-Tecnologias utilizadas:<br>
-
-<a href="https://code.visualstudio.com/">![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)</a>
-<a href="https://pt-br.reactjs.org/">![Badge](https://img.shields.io/badge/-React%20JS-000000?style=for-the-badge&logo=react)</a>
-<a href="https://www.w3schools.com/css/">![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)</a>
-<a href="https://www.typescriptlang.org/">![Badge](https://img.shields.io/badge/-Typescript-000000?style=for-the-badge&logo=typescript)</a>
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/) 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-### 🎲 Instalação
+First, run the development server:
 
 ```bash
-# Clone este repositório
-$ git clone <https://github.com/QuintanC/drag-and-drop>
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd drag-and-drop
-
-# Instale as dependências
-$ yarn
-
-# Execute a aplicação em modo de desenvolvimento
-$ yarn start
-
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-## Detalhes da aplicação  ` 
-<br>
-Ainda em desenvolvimento, o projeto tem como objetivo apenas estudo na Linguaguem de Programação Javascript e no Framework ReactJS <br>
-Necessario Recriar Drag and drop - https://www.youtube.com/watch?v=awRtgpRsdTQ&ab_channel=Rocketseat
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

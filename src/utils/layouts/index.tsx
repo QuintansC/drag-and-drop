@@ -1,7 +1,7 @@
-import { useEffect, useContext, useState } from 'react';
-import { NavComponents } from '../../infrastructure/components/dashboard/NavComponents';
-import { NavVertical } from '../../infrastructure/components/dashboard/NavVertical/index';
-import styles from './styles.module.scss';
+import { useEffect } from 'react';
+import { NavComponents } from '../../components/dashboard/NavComponents';
+import { NavVertical } from '../../components/dashboard/NavVertical/index';
+import styles from './styles.module.css';
 function HomePricipal(props: any){ 
   useEffect(()=>{
     document.title = props.title;
