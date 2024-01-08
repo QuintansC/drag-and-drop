@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useEffect, useState } from 'react';
 import styles from '../styles/login.module.css';
-import images  from '../../public/images/index';
+import images  from '../utils/images';
 import useLogin  from '../data/signin';
 import { LoginType } from '../types';
+import Image from 'next/image';
 
 export default  function Login(props: LoginType){
     const [login, setLogin] = useState('');
@@ -32,8 +33,8 @@ export default  function Login(props: LoginType){
 
     return(
         <div className={styles.loginContent}>
-            <div className='Loading'><img src='/loading.gif' alt="" /></div>
-            <img className={styles.logo} alt="logo" src={images.Logo}/>
+            <div className='Loading'><Image width={30} height={30} src={images.Loading} alt="" /></div>
+            <Image width={0} height={0} className={styles.logo} alt="logo" src={images.Logo}/>
             <p hidden>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
@@ -50,9 +51,9 @@ export default  function Login(props: LoginType){
                             onClick={()=>loading?null:signIn(login, senha)}
                         >Fazer Login</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
-                        <button name="google" className={styles.submitButton} type="button" ><img src={images.Google} alt=""/> Conectar com o Google</button>
-                        <button name="microsoft" className={styles.submitButton} type="button" ><img src={images.Microsoft} alt=""/> Conectar com a Microsoft</button>
-                        <button name="apple" className={styles.submitButton} type="button" ><img src={images.Apple} alt=""/> Conectar com a Apple</button>
+                        <button name="google" className={styles.submitButton} type="button" ><Image width={30} height={30} src={images.Google} alt=""/> Conectar com o Google</button>
+                        <button name="microsoft" className={styles.submitButton} type="button" ><Image width={30} height={30} src={images.Microsoft} alt=""/> Conectar com a Microsoft</button>
+                        <button name="apple" className={styles.submitButton} type="button" ><Image width={30} height={30} src={images.Apple} alt=""/> Conectar com a Apple</button>
                     </div>
                 </form>
             </div>

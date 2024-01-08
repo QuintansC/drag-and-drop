@@ -8,6 +8,9 @@ import { FaBell, FaRegBell, FaUserAlt } from 'react-icons/fa';
 import { BiInfoCircle } from 'react-icons/bi';
 import  Link  from 'next/link';
 
+import images from '../../../utils/images'
+import Image from 'next/image';
+
 export function NavComponents(props: any){
   const { open, setOpen } = useContext(DropzoneContext)
   const [openMenu, setOpenMenu] = useState(false)
@@ -21,8 +24,8 @@ export function NavComponents(props: any){
       <button onClick={()=>{
         setOpen(!open);
       }} 
-      className={styles.menu} type="button"><img src="/menu.png" alt=""></img></button>
-      <img src="/logo.gif" alt="Trello" className={styles.logo} />
+      className={styles.menu} type="button"><img src={images.Menu} alt=""></img></button>
+      <Image src={images.LogoGif} width={0} height={20} alt="Trello" className={styles.logo} />
       <div className={styles.links}>
         <div>
           <Link 
@@ -32,7 +35,7 @@ export function NavComponents(props: any){
               setOpenMenu(!openMenu);
             }}
           >
-            Área de trabalho<img src="/down-arrow.png"  alt="new"/>
+            Área de trabalho<img src="../../../../down-arrow.png"  alt="new"/>
           </Link> 
           <ul style={openMenu?{ display: 'block'}:{display: 'none'}}>
             <li className={styles.closeDropDown}><div /> Área de trabalo <b> X </b></li>
@@ -47,14 +50,14 @@ export function NavComponents(props: any){
           href="http://localhost:3000/" 
           className={styles.buttonAnimate}
         >
-          Recente<img src="/down-arrow.png" alt="save"/>
+          Recente<img src="../../../../down-arrow.png" alt="save"/>
         </Link>
 
         <Link 
           href="http://localhost:3000/" 
           className={styles.buttonAnimate}
         >
-          Marcado com estrela<img src="/down-arrow.png" alt="add cart"/>
+          Marcado com estrela<img src="../../../../down-arrow.png" alt="add cart"/>
         </Link>
 
         <button type="button"> <span>Criar</span> </button>

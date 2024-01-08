@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/cadastrar.module.css';
-import svg from '../../public/images/index';
+import images  from '../utils/images';
 import { CadastroType } from '../types';;
 import useCadastrar from '../data/signup';
+
+import Google from '../../public/images/google.svg';
+import Image from 'next/image';
 
 export default function Cadastrar(props: CadastroType){
     const [login, setLogin] = useState('');
@@ -38,8 +41,8 @@ export default function Cadastrar(props: CadastroType){
     }, [loading])
     return(
         <div className={styles.cadastroContent}>
-            <div className='Loading'><img src='/loading.gif' alt="" /></div>
-            <img className={styles.Logo} alt="logo" src={svg.Logo} />
+            <div className='Loading'><img src='../../public/loading.gif' alt="" /></div>
+            <Image width={0} height={0} className={styles.Logo} alt="logo" src={images.Logo} />
             <p hidden>{message}</p>
             <div className={styles.form}>
                 <form method="POST">
@@ -52,9 +55,9 @@ export default function Cadastrar(props: CadastroType){
                     <div>
                         <button className={styles.submitButtons} title="conectar" onClick={()=>signUp(email, login, senha)} type="button" style={{marginTop: '50%', marginBottom: '-20%'}}>Conectar</button>
                         <h3 className={styles.textConectado}>Ou</h3>                  
-                        <button className={styles.submitButtons} type="button" ><img src={svg.Google} alt=""/> Conectar com o Google</button>
-                        <button className={styles.submitButtons} type="button" ><img src={svg.Microsoft} alt=""/> Conectar com a Microsoft</button>
-                        <button className={styles.submitButtons} type="button" ><img src={svg.Apple} alt=""/> Conectar com a Apple</button>
+                        <button className={styles.submitButtons} type="button" ><Image width={30} height={30} src={Google} alt=""/> Conectar com o Google</button>
+                        <button className={styles.submitButtons} type="button" ><Image width={30} height={30} src={images.Microsoft} alt=""/> Conectar com a Microsoft</button>
+                        <button className={styles.submitButtons} type="button" ><Image width={30} height={30} src={images.Apple} alt=""/> Conectar com a Apple</button>
                     </div>
                </form>
                
