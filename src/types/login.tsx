@@ -1,2 +1,2 @@
-import { RouteComponentProps } from 'react-router-dom';
-export interface LoginType extends RouteComponentProps{}
+import { Router } from "next/router";
+export interface LoginType extends Router{}

@@ -1,2 +1,3 @@
-import { RouteComponentProps } from 'react-router-dom';
-export interface CadastroType extends RouteComponentProps{}
+import { Router } from "next/router";
+
+export interface CadastroType extends Router{}
