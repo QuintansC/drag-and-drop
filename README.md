@@ -31,9 +31,9 @@ Indices da aplicação
 
 <details>
   <summary>Telas da aplicação</summary>
-    <img src="src/images/README/home.png" width='340px' height='150px'>
-    <img src="src/images/README/cadastro.jpeg" width='340px' height='150px'>
-    <img src="src/images/README/login.jpeg" width='340px' height='150px'>
+    <img src="public/images/README/home.png" width='340px' height='150px'>
+    <img src="public/images/README/cadastro.jpeg" width='340px' height='150px'>
+    <img src="public/images/README/login.jpeg" width='340px' height='150px'>
 </details>
 
 
@@ -67,7 +67,7 @@ $ cd drag-and-drop
 $ yarn
 
 # Execute a aplicação em modo de desenvolvimento
-$ yarn start
+$ yarn dev
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```

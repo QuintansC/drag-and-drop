@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react';
 import api from '../utils/api';
-import { useHistory } from 'react-router-dom';
 import { DropzoneContext } from '../utils/contexts/DropzoneContext';
 import swal from 'sweetalert';
+import { useRouter } from 'next/router';
 
 const useLogin = ()=>{
-    const history = useHistory();
+    const history = useRouter();
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false)
     const { setToken } = useContext(DropzoneContext);

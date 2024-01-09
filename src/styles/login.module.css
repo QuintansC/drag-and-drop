@@ -1,0 +1,81 @@
+.loginContent{
+    position: absolute;
+    width: 100.2%;
+    height: 140%;
+    background: url(../../public/images/Trello.png) 0% 50% no-repeat fixed;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginContent .logo{
+    height: 50%;
+    width: 35%;
+}  
+.loginContent h2{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    color: black;
+    font-size: 16px;
+}
+.loginContent .form{
+    position: relative;
+    height: 60%;
+    width: 25%;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    padding-top: 6.5%;
+    justify-content: center;
+    bottom: 30px;
+}
+.loginContent .form input {
+    margin: 10px 0;
+    display: block;
+    line-height: 15px;
+    width: 280px;
+    height: 35px;
+    transition: 1s;
+    border: 1px solid #00000026;
+    box-shadow: 3px 3px 3px grey;
+}
+.loginContent .form div{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-42%, -0%);
+}
+.loginContent .form div img{
+    position: relative;
+    display: flex;
+    height: 50%;
+    width: 30%;
+}
+.loginContent .form div .textConectado{
+    position: relative;
+    transform: translate(-12%, 15%);
+    left: 50%;
+    font-size: 16px;
+}
+.loginContent .form div .submitButton{
+    position: relative;
+    width: 85%;
+    background-color: white;
+    border-color:  transparent;
+    box-shadow: 0 0 1.5px black;
+    margin-top: 8px !important;
+    height: 40px;
+    line-height: 0px;  
+}                            
+                            
+.loginContent .form div .submitButton img{
+    position: absolute;
+    top: 7%;
+}
+.loginContent .form div button:first-child{
+    background-color: rgb(2, 165, 2);
+    color: white;
+}

@@ -1,0 +1,29 @@
+.board{
+    background-color: #141316;
+    border: 1px solid #FD951F11;
+    border-radius: 4px;
+    margin: 0 16px;
+}
+.board h3{
+    padding: 16px;
+    margin: 0;
+    color: #fd951fcc;
+}
+
+.dropzone{
+    padding: 16px;
+    min-width: 282px;
+    min-height: 200px;
+}
+.highlight{
+    background-color: #FD951F08;
+}
+.over{
+    background-color: #4cd13711;
+}
+.boards{
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+}
+  

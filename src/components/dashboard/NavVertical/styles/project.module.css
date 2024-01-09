@@ -1,0 +1,26 @@
+.project{
+    opacity: 1;
+}
+.project button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.project button b{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+}
+.project button svg:last-child{
+    position: absolute;
+    margin-left: 195px;
+    @media (min-width: 1368px) {
+        margin-left: 320px;
+    }
+    filter: invert(1);
+}
+.project li{
+    padding-left: 7%;
+}

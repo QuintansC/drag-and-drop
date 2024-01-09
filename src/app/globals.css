@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html::-webkit-scrollbar{
+  background-color: rgba(211, 211, 211, 0.3);
+  width: 12px;    
+}
+html::-webkit-scrollbar-thumb{ 
+  background-color: rgba(54, 54, 54, 0.3);
+  border-radius: 25px;
+}
+html{
+	--red-light: #e06767;
+	font-family: 'Nunito';
+	margin: 0; 
+	padding: 0;
+	
+}
+html body{
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+
+.swal-title {
+	margin-top: -10%;
+
+}
+
+.swal-icon{
+	width: 40px;
+    height: 40px;
+	margin: 0px 30px;
+}
+.swal-icon:first-child {
+  margin-top: 20px;
+}
+.swal-icon--error__line {
+  width: 23px;
+  top: 19px;
+}
+.swal-icon--left {
+  left: 8px;
+}
+.swal-icon--right {
+  right: 9px;
+}
+.Loading{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.74);
+	z-index: 999;
+}
+.Loading img{
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+}
+
+
+.active{
+	background-color: rgba(0, 0, 255, 0.1);
+}
+.active a{
+  color: blue !important;
+}	
+.active:hover{
+  background-color: rgba(0, 0, 255, 0.1) !important;
+}
+
+
