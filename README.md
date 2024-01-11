@@ -10,7 +10,7 @@ Interface do Trello sendo utilizada para estilização de um projeto Kanban
 - [x] Dashboard
 ### Features
 
-- [ ] Transformar em NextJS
+- [x] Transformar em NextJS
 - [x] Home
 - [x] Cadastro
 - [x] Login
