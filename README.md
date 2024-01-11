@@ -44,7 +44,7 @@ Indices da aplicação
 Tecnologias utilizadas:<br>
 
 <a href="https://code.visualstudio.com/">![Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=for-the-badge&logo=visual-studio-code)</a>
-<a href="https://pt-br.reactjs.org/">![Badge](https://img.shields.io/badge/-Next%20JS-000000?style=for-the-badge&logo=next)</a>
+<a href="https://pt-br.reactjs.org/">![Badge](https://img.shields.io/badge/-Next%20JS-000000?style=for-the-badge&logo=nextdotjs)</a>
 <a href="https://www.w3schools.com/css/">![Badge](https://img.shields.io/badge/-CSS-blue?style=for-the-badge&logo=css3)</a>
 <a href="https://www.typescriptlang.org/">![Badge](https://img.shields.io/badge/-Typescript-000000?style=for-the-badge&logo=typescript)</a>
 
